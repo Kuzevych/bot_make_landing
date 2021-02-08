@@ -4,19 +4,20 @@ import { WithStyles, withStyles } from '@material-ui/core/styles';
 
 import styles from './MainScreen.styles';
 
-export interface MainScreenProps extends WithStyles<typeof styles> {}
+export interface MainScreenProps extends WithStyles<typeof styles> {
+}
 
 const MainScreen = (props: MainScreenProps) => {
 
-    const { classes } = props;
+  const { classes } = props;
 
-    return (
-        <Box display="flex" flexDirection="column" className={classes.root}>
-            <p>Header</p>
-            <p>Main</p>
-            <p>Bottom</p>
-        </Box>
-    );
-}
+  return (
+    <Box display="flex" flexDirection="column" className={classes.root}>
+      <p>Header</p>
+      <p>Main</p>
+      <p>Bottom</p>
+    </Box>
+  );
+};
 
 export default withStyles(styles)(MainScreen);

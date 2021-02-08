@@ -10,13 +10,13 @@ export interface LandingProps extends WithStyles<typeof styles> {}
 
 const Landing = (props: LandingProps) => {
 
-    const { classes } = props;
+  const { classes } = props;
 
-    return (
-        <Box display="flex" flexDirection="column" className={classes.root}>
-            <MainScreen />
-        </Box>
-    )
+  return (
+    <Box display="flex" flexDirection="column" className={classes.root}>
+      <MainScreen />
+    </Box>
+  );
 };
 
 export default withStyles(styles)(Landing);
