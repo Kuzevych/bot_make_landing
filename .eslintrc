@@ -25,7 +25,7 @@
     "indent": ["error", 2],
     "object-curly-spacing": ["error", "always"],
     "no-extra-parens": "error",
-    "max-len": ["error", { "code": 100 }],
+    "max-len": ["error", { "code": 150 }],
     "no-multi-spaces": "error"
   },
   "settings": {
