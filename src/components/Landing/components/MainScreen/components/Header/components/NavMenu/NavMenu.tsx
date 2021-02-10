@@ -6,7 +6,7 @@ import cx from 'classnames';
 
 import styles from './NavMenu.styles';
 
-export interface NavMenuProps extends WithStyles {
+export interface NavMenuProps extends WithStyles<typeof styles> {
 }
 
 export interface config {
