@@ -9,6 +9,11 @@ import styles from './NavMenu.styles';
 export interface NavMenuProps extends WithStyles {
 }
 
+export interface config {
+  text: string;
+  component?: React.ReactNode;
+}
+
 function NavMenu ({ classes }: NavMenuProps): React.ReactElement {
   const [anchorEl, setAnchorEl] = React.useState<SVGSVGElement | null>(null);
 
@@ -21,8 +26,8 @@ function NavMenu ({ classes }: NavMenuProps): React.ReactElement {
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
 
-  const navConfig = React.useMemo(() => {
-    const config = [
+  const navConfig: config[] = React.useMemo(() => {
+    return [
       { text: 'Program' },
       { text: 'Benefits' },
       { text: 'Enrolling' },
@@ -52,8 +57,6 @@ function NavMenu ({ classes }: NavMenuProps): React.ReactElement {
       },
       { text: 'FAQ' },
     ];
-
-    return config;
   }, []);
 
   return (
