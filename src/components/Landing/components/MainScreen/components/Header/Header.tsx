@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Box, withStyles, WithStyles } from "@material-ui/core";
 import Logo from 'shared/icons/Logo';
 import SearchInput from "./components/SearchInput";
+import NavMenu from './components/NavMenu';
 
 import styles from './Header.styles';
 
@@ -18,9 +19,9 @@ function Header ( props: HeaderProps ) {
         <h3 className={classes.logoText}>botmakers</h3>
       </Box>
       <SearchInput />
-      <p>Menu</p>
+      <NavMenu />
     </Box>
   );
-};
+}
 
 export default withStyles(styles)(Header);
