@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { WithStyles, withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
+import { Button } from "@material-ui/core";
 
 import Advantage from "./components/Advantage";
 
 import styles from './Program.styles';
-import { Button } from "@material-ui/core";
 
 export interface ProgramProps extends WithStyles<typeof styles> {
   price?: number;

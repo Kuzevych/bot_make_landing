@@ -2,9 +2,10 @@ import * as React from 'react';
 import { withStyles, WithStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 
-import styles from './Advantage.styles';
 import MarkIcon from "shared/icons/Mark";
 import { Button } from "@material-ui/core";
+
+import styles from './Advantage.styles';
 
 export interface AdvantageI {
   value: string;

@@ -6,7 +6,7 @@ import styles from './Mark.styles';
 
 interface MarkIconProps extends Omit<SvgIconProps, 'classes'>, WithStyles<typeof styles> { }
 
-const MarkIcon: React.FC<MarkIconProps> = ({ classes }) => {
+function MarkIcon ({ classes }: MarkIconProps): React.ReactElement {
   return (
     <SvgIcon xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none" classes={{ root: classes.root }}>
       <g filter="url(#filter0_ddd)">
@@ -41,6 +41,6 @@ const MarkIcon: React.FC<MarkIconProps> = ({ classes }) => {
       </defs>
     </SvgIcon>
   );
-};
+}
 
 export default withStyles(styles)(MarkIcon);
