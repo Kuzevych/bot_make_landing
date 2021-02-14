@@ -2,8 +2,8 @@ import * as React from 'react';
 import { WithStyles, withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 
-import Program from "./Program/Program";
 import { AdvantageI } from './Program/components/Advantage';
+import Program from './Program';
 
 import styles from "./Programs.styles";
 

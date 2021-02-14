@@ -3,8 +3,9 @@ import { WithStyles, withStyles } from '@material-ui/core/styles';
 import { Box } from "@material-ui/core";
 
 import MainScreen from "./components/MainScreen";
-import Programs from "./components/Programs/Programs";
+import Programs from "./components/Programs";
 import Benefits from "./components/Benefits";
+import Enroll from "./components/Enroll";
 
 import styles from './Landing.styles';
 
@@ -21,6 +22,7 @@ const Landing = (props: LandingProps) => {
         title="Ready to start?"
       />
       <Benefits />
+      <Enroll />
     </Box>
   );
 };

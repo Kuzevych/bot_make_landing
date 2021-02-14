@@ -6,7 +6,7 @@ export default function style () {
     '@global': {
       body: {
         margin: '0',
-        fontFamily: '"Courier New", sans-serif'
+        fontFamily: '"Comic Sans MS", sans-serif'
       }
     },
     root: {}
