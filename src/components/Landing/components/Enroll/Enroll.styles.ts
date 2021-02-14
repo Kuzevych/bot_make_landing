@@ -1,17 +1,15 @@
 import { createStyles, Theme } from '@material-ui/core/styles';
 
-const styles = ({ spacing }: Theme) => {
+export default function styles({ spacing }: Theme) {
   return createStyles({
     root: {
-      height: '100vh',
+      maxHeight: 550,
       background: 'linear-gradient(to right, #090A19, #24295B)',
       color: 'white'
     },
     container: {
-      padding: spacing(0, 40),
-      height: '100%'
+      padding: spacing(25, 40),
+      textAlign: 'center'
     }
   });
-};
-
-export default styles;
+}

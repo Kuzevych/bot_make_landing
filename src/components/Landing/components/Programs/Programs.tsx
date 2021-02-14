@@ -2,8 +2,8 @@ import * as React from 'react';
 import { WithStyles, withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 
-import Program from "./Program/Program";
 import { AdvantageI } from './Program/components/Advantage';
+import Program from './Program';
 
 import styles from "./Programs.styles";
 
@@ -78,7 +78,7 @@ function Programs ({ classes, title }: ProgramsProps): React.ReactElement {
     ];
   },[]);
 
-  const handleSubmit = (price: number, chats: number) => {
+  const handleSubmit = (price: number, chats: string) => {
     console.log(price);
     console.log(chats);
   };
