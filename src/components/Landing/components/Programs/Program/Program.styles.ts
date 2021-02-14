@@ -11,7 +11,7 @@ export default function styles({ spacing }: Theme) {
 
       '&:hover': {
         boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.16)',
-        transition: '.6s',
+        transition: '.4s',
         backgroundColor: colors.white
       }
     },

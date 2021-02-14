@@ -12,10 +12,29 @@ export interface ProgramProps extends WithStyles<typeof styles> {
   title?: string;
   description?: string;
   advantage?: any[];
-  onSubmit?: (price?: number, chats?: number) => any;
+  onSubmit?: (price?: number, chats?: string) => any;
 }
 
 function Program ({ classes, price, title, description, advantage, onSubmit }: ProgramProps): React.ReactElement {
+  let [chatsCount, setChatsCount] = React.useState('');
+  let [inputError, setInputError] = React.useState(false);
+
+  const handleChatsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setChatsCount(e.currentTarget.value);
+    setInputError(false);
+  };
+
+  const handleGetStart = () => {
+    if (chatsCount) {
+      onSubmit(price, chatsCount);
+      setChatsCount('');
+
+      return;
+    }
+
+    setInputError(true);
+  };
+
   return (
     <Box display="flex" flexDirection="column" justifyContent="space-between" className={classes.root}>
       <div className={classes.topContainer}>
@@ -39,17 +58,20 @@ function Program ({ classes, price, title, description, advantage, onSubmit }: P
       <div>
         <TextField
           fullWidth
+          error={inputError}
           label="Many chats"
           variant="outlined"
           size="small"
+          value={chatsCount}
           className={classes.chatsCount}
+          onChange={handleChatsChange}
         />
         <Button
           fullWidth
           variant="contained"
           color="primary"
           classes={{ root: classes.btn }}
-          onClick={() => onSubmit(price, 2)}
+          onClick={handleGetStart}
         >
           Get Started
         </Button>

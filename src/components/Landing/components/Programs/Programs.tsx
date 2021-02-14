@@ -78,7 +78,7 @@ function Programs ({ classes, title }: ProgramsProps): React.ReactElement {
     ];
   },[]);
 
-  const handleSubmit = (price: number, chats: number) => {
+  const handleSubmit = (price: number, chats: string) => {
     console.log(price);
     console.log(chats);
   };
