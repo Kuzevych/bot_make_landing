@@ -3,7 +3,7 @@ import { WithStyles, withStyles } from '@material-ui/core/styles';
 import { Box } from "@material-ui/core";
 
 import MainScreen from "./components/MainScreen";
-import Programs from "./components/Programs";
+import Programs from "./components/Programs/Programs";
 
 import styles from './Landing.styles';
 

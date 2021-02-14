@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { WithStyles, withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
-import { Button } from "@material-ui/core";
+import { Button, TextField } from "@material-ui/core";
 
 import Advantage from "./components/Advantage";
 
@@ -37,6 +37,13 @@ function Program ({ classes, price, title, description, advantage, onSubmit }: P
       </div>
 
       <div>
+        {/*<TextField*/}
+        {/*  fullWidth*/}
+        {/*  label="Many chats"*/}
+        {/*  variant="outlined"*/}
+        {/*  size="small"*/}
+        {/*  className={classes.chatsCount}*/}
+        {/*/>*/}
         <Button
           fullWidth
           variant="contained"

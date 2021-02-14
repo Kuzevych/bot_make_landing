@@ -5,7 +5,8 @@ export default function style () {
   return createStyles({
     '@global': {
       body: {
-        margin: '0'
+        margin: '0',
+        fontFamily: '"Courier New", sans-serif'
       }
     },
     root: {}

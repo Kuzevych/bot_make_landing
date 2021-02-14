@@ -34,8 +34,11 @@ export default function styles({ spacing }: Theme) {
     forWhom: {
       marginTop: spacing(4)
     },
+    chatsCount: {
+      marginBottom: spacing(4),
+    },
     btn: {
-      marginTop: spacing(4),
+      // marginTop: spacing(4),
     }
   });
 }
