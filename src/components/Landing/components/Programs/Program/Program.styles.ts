@@ -37,8 +37,6 @@ export default function styles({ spacing }: Theme) {
     chatsCount: {
       marginBottom: spacing(4),
     },
-    btn: {
-      // marginTop: spacing(4),
-    }
+    btn: {}
   });
 }

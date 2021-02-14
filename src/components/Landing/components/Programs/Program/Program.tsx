@@ -37,13 +37,13 @@ function Program ({ classes, price, title, description, advantage, onSubmit }: P
       </div>
 
       <div>
-        {/*<TextField*/}
-        {/*  fullWidth*/}
-        {/*  label="Many chats"*/}
-        {/*  variant="outlined"*/}
-        {/*  size="small"*/}
-        {/*  className={classes.chatsCount}*/}
-        {/*/>*/}
+        <TextField
+          fullWidth
+          label="Many chats"
+          variant="outlined"
+          size="small"
+          className={classes.chatsCount}
+        />
         <Button
           fullWidth
           variant="contained"
