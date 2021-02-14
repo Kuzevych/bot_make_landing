@@ -29,6 +29,21 @@ module.exports = {
         test: /\.css$/,
         loader: "css-loader",
       },
+      {
+        test: /\.(jpe?g|gif|png|svg)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(ttf|otf|eot|woff|woff2)$/,
+        use: ['file-loader']
+      }
     ],
   },
   plugins: [
