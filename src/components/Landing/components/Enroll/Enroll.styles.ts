@@ -10,6 +10,15 @@ export default function styles({ spacing }: Theme) {
     container: {
       padding: spacing(25, 40),
       textAlign: 'center'
+    },
+    title: {
+      marginBottom: spacing(12)
+    },
+    enroll: {
+      width: '24%',
+    },
+    image: {
+
     }
   });
 }

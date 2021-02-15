@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const Dotenv = require("dotenv-webpack");
 
 //TODO absolute path need
 
@@ -53,5 +54,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "./src/components/styles/index.css",
     }),
+    new Dotenv()
   ],
 };
