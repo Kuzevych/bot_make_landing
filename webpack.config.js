@@ -2,6 +2,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+//TODO absolute path need
+
 module.exports = {
   entry: "./index.tsx",
   target: "web",
@@ -25,6 +27,7 @@ module.exports = {
         test: /\.js$/,
         loader: "source-map-loader",
       },
+      // 83138200
       {
         test: /\.css$/,
         loader: "css-loader",
@@ -33,10 +36,7 @@ module.exports = {
         test: /\.(jpe?g|gif|png|svg)$/i,
         use: [
           {
-            loader: 'url-loader',
-            options: {
-              limit: 10000
-            }
+            loader: 'file-loader',
           }
         ]
       },
@@ -51,7 +51,7 @@ module.exports = {
       template: path.resolve(__dirname, "public", "index.html"),
     }),
     new MiniCssExtractPlugin({
-      filename: "./src/components/index.css",
+      filename: "./src/components/styles/index.css",
     }),
   ],
 };

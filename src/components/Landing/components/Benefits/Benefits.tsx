@@ -18,7 +18,7 @@ interface BenefitI {
   description: string;
 }
 
-function Benefits ({ classes }: BenefitsProps): React.ReactElement {
+const Benefits = ({ classes }: BenefitsProps) => {
 
   const benefitsConfig: BenefitI[] = React.useMemo(()=>{
     return [
@@ -48,6 +48,6 @@ function Benefits ({ classes }: BenefitsProps): React.ReactElement {
       }
     </Box>
   );
-}
+};
 
 export default withStyles(styles)(Benefits);

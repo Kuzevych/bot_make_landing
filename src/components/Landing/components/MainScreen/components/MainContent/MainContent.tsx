@@ -2,14 +2,13 @@ import * as React from 'react';
 import { withStyles, WithStyles } from "@material-ui/core/styles";
 import { Box, Button, Dialog, DialogTitle } from "@material-ui/core";
 
-// @ts-ignore
 import bot from 'shared/images/bot.png';
 
 import styles from "./MainContent.styles";
 
 export interface MainContentProps extends WithStyles<typeof styles> {}
 
-function MainContent({ classes }: MainContentProps): React.ReactElement {
+const MainContent = ({ classes }: MainContentProps) => {
   let [open, setOpen] = React.useState(false);
 
   const handleOpen = React.useCallback(()=> setOpen(true),[]);
@@ -33,6 +32,6 @@ function MainContent({ classes }: MainContentProps): React.ReactElement {
       </Dialog>
     </Box>
   );
-}
+};
 
 export default withStyles(styles)(MainContent);

@@ -1,4 +1,6 @@
 @font-face {
-    font-family: 'OpenSans';
-    /*src: url("src/assets/fonts/OpenSans-Regular.ttf");*/
+    font-family: 'Proxima Nova Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local("Proxima Nova"), url("src/assets/fonts/ProximaNova-Regular.otf") format('opentype');
 }

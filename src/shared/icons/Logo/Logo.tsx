@@ -1,9 +1,11 @@
 import * as React from 'react';
-import SvgIcon from '@material-ui/core/SvgIcon';
+import SvgIcon, { SvgIconProps } from '@material-ui/core/SvgIcon';
 
-const Logo = () => {
+interface LogoProps extends SvgIconProps {}
+
+const Logo: React.FC<LogoProps> = (props) => {
   return (
-    <SvgIcon xmlns="http://www.w3.org/2000/svg" width="27" height="19" viewBox="0 0 27 19" fill="none">
+    <SvgIcon xmlns="http://www.w3.org/2000/svg" width="27" height="19" viewBox="0 0 27 19" fill="none" {...props}>
       <path
         d="M20.7362 3.15796H5.50197C2.4655 3.15796 0 5.65796 0 8.76322V11.158C0 13.5264 1.4793 15.5527 3.52956 16.3685L2.9586 19.0001L7.2927 16.7106H20.7102C23.7467 16.7106 26.2122 14.2106 26.2122 11.1316V8.73691C26.2382 5.65796 23.7726 3.15796 20.7362 3.15796Z"
         fill="url(#paint0_linear)"/>

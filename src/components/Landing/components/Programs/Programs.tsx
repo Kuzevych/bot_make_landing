@@ -18,7 +18,7 @@ interface ProgramsConfig {
   advantage: AdvantageI[];
 }
 
-function Programs ({ classes, title }: ProgramsProps): React.ReactElement {
+const Programs = ({ classes, title }: ProgramsProps) => {
 
   const programsConfig: ProgramsConfig[] = React.useMemo(()=>{
     return [
@@ -37,7 +37,10 @@ function Programs ({ classes, title }: ProgramsProps): React.ReactElement {
             value: 'Pass more test, get more certificate',
             label: true
           }
-        ]
+        ],
+        classes: {
+          root: classes.program
+        },
       },
       {
         title: 'Chatbot Developer Certified Expert',
@@ -55,7 +58,10 @@ function Programs ({ classes, title }: ProgramsProps): React.ReactElement {
             label: true
           },
           { value: 'The ability to pass the test for two or more professionals ' },
-        ]
+        ],
+        classes: {
+          root: classes.program
+        },
       },
       {
         title: 'Chatbot Developer Certified Master',
@@ -73,7 +79,11 @@ function Programs ({ classes, title }: ProgramsProps): React.ReactElement {
             label: true
           },
           { value: 'The ability to pass the test for two or more professionals ' }
-        ]
+        ],
+        classes: {
+          root: classes.program
+        },
+        // onSubmit
       }
     ];
   },[]);
@@ -88,13 +98,13 @@ function Programs ({ classes, title }: ProgramsProps): React.ReactElement {
       <h2 className={classes.title}> {title} </h2>
       <Box display="flex" justifyContent="space-between" className={classes.programs}>
         {
-          programsConfig.map((config) =>
-            <Program classes={{ root: classes.program }} key={Math.random()} {...config} onSubmit={handleSubmit} />
+          programsConfig.map((config, idx) =>
+            <Program key={config.title + idx} {...config} onSubmit={handleSubmit} />
           )
         }
       </Box>
     </Box>
   );
-}
+};
 
 export default withStyles(styles)(Programs);

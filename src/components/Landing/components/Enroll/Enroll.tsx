@@ -5,7 +5,7 @@ import styles from "./Enroll.styles";
 
 export interface EnrollProps extends WithStyles<typeof styles> {}
 
-function Enroll({ classes }: EnrollProps): React.ReactElement {
+const Enroll = ({ classes }: EnrollProps) => {
   return (
     <div className={classes.root}>
       <div className={classes.container}>
@@ -13,6 +13,6 @@ function Enroll({ classes }: EnrollProps): React.ReactElement {
       </div>
     </div>
   );
-}
+};
 
 export default withStyles(styles)(Enroll);

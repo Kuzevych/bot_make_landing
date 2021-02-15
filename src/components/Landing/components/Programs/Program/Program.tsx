@@ -15,7 +15,7 @@ export interface ProgramProps extends WithStyles<typeof styles> {
   onSubmit?: (price?: number, chats?: string) => any;
 }
 
-function Program ({ classes, price, title, description, advantage, onSubmit }: ProgramProps): React.ReactElement {
+const Program = ({ classes, price, title, description, advantage, onSubmit }: ProgramProps) => {
   let [chatsCount, setChatsCount] = React.useState('');
   let [inputError, setInputError] = React.useState(false);
 
@@ -78,6 +78,6 @@ function Program ({ classes, price, title, description, advantage, onSubmit }: P
       </div>
     </Box>
   );
-}
+};
 
 export default withStyles(styles)(Program);
