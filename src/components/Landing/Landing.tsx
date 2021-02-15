@@ -6,6 +6,7 @@ import MainScreen from "./components/MainScreen";
 import Programs from "./components/Programs";
 import Benefits from "./components/Benefits";
 import Enroll from "./components/Enroll";
+import Certifications from "./components/Certifications";
 
 import styles from './Landing.styles';
 
@@ -23,6 +24,7 @@ const Landing = (props: LandingProps) => {
       />
       <Benefits />
       <Enroll />
+      <Certifications/>
     </Box>
   );
 };

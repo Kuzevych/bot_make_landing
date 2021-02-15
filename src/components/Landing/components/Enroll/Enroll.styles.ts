@@ -8,11 +8,11 @@ export default function styles({ spacing }: Theme) {
       color: 'white'
     },
     container: {
-      padding: spacing(25, 40),
+      padding: spacing(15, 40),
       textAlign: 'center'
     },
-    title: {
-      marginBottom: spacing(12)
+    enrolls: {
+      marginTop: spacing(12)
     },
     enroll: {
       width: '24%',

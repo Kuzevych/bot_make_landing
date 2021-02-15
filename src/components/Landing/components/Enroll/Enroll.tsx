@@ -5,6 +5,7 @@ import Box from "@material-ui/core/Box";
 import file from 'shared/images/file.png';
 import book from 'shared/images/book.png';
 import like from 'shared/images/like.png';
+import HeaderSection from "shared/components/HeaderSection";
 
 import styles from "./Enroll.styles";
 
@@ -38,8 +39,8 @@ const Enroll = ({ classes }: EnrollProps) => {
   return (
     <div className={classes.root}>
       <div className={classes.container}>
-        <h2 className={classes.title}>How to enroll</h2>
-        <Box display="flex" flexDirection="row" justifyContent="space-between">
+        <HeaderSection title="How to enroll" />
+        <Box display="flex" flexDirection="row" justifyContent="space-between" className={classes.enrolls}>
           {
             enrollConfig.map(({ text, image })=>
               <Box key={text} display="flex" flexDirection="column" alignItems="center" className={classes.enroll}>

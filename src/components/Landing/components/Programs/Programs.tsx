@@ -4,6 +4,7 @@ import Box from "@material-ui/core/Box";
 
 import { AdvantageI } from './Program/components/Advantage';
 import Program from './Program';
+import HeaderSection from "shared/components/HeaderSection";
 
 import styles from "./Programs.styles";
 
@@ -83,7 +84,6 @@ const Programs = ({ classes, title }: ProgramsProps) => {
         classes: {
           root: classes.program
         },
-        // onSubmit
       }
     ];
   },[]);
@@ -95,7 +95,7 @@ const Programs = ({ classes, title }: ProgramsProps) => {
 
   return (
     <Box display="flex" className={classes.root} flexDirection="column">
-      <h2 className={classes.title}> {title} </h2>
+      <HeaderSection title={title}/>
       <Box display="flex" justifyContent="space-between" className={classes.programs}>
         {
           programsConfig.map((config, idx) =>
