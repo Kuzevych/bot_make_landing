@@ -19,7 +19,7 @@ const MainScreen = (props: MainScreenProps) => {
     // @ts-ignore
     let oauth = window.gapi;
 
-    oauth.load('auth2',()=>{
+    oauth?.load('auth2',()=>{
       oauth.auth2
         .init({
           client_id:
