@@ -11,7 +11,8 @@ export default function styles({ spacing }: Theme) {
     description: {
       marginTop: spacing(7),
       padding: spacing(0, '15%'),
-      lineHeight: 2
+      lineHeight: 2,
+      textAlign: 'center'
     }
   });
 }
