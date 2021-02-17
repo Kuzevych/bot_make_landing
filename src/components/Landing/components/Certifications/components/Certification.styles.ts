@@ -3,17 +3,18 @@ import { createStyles, Theme } from '@material-ui/core/styles';
 export default function styles({ spacing }: Theme) {
   return createStyles({
     root: {
-      textAlign: 'center'
+      marginTop: spacing(7)
+    },
+    image: {
+      marginRight: spacing(4)
     },
     title: {
-      fontSize: 40,
+      fontSize: 18,
       fontWeight: 700,
-      margin: spacing(0, 'auto')
     },
     description: {
-      marginTop: spacing(7),
-      padding: spacing(0, '10%'),
-      lineHeight: 2,
+      fontSize: 14,
+      margin: 0
     }
   });
 }

@@ -12,7 +12,7 @@ export interface HeaderSectionProps extends WithStyles<typeof styles> {
 
 const HeaderSection = ({ title, description, classes }: HeaderSectionProps) => {
   return(
-    <Box display="flex" flexDirection="column" alignItems="center">
+    <Box display="flex" flexDirection="column" alignItems="center" className={classes.root}>
       <h2 className={classes.title}>{title}</h2>
       { description && <span className={classes.description} dangerouslySetInnerHTML={{ __html: String(description) }}/> }
     </Box>

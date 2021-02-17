@@ -3,7 +3,7 @@ import { WithStyles, withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import { Button, TextField } from "@material-ui/core";
 
-import Advantage from "./components/Advantage";
+import Advantage from "shared/components/Advantage";
 
 import styles from './Program.styles';
 
