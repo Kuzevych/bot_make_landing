@@ -1,4 +1,5 @@
 import { createStyles, Theme } from '@material-ui/core/styles';
+import { colors } from "shared/constants/colors";
 
 export default function styles({ spacing }: Theme) {
   return createStyles({
@@ -16,9 +17,26 @@ export default function styles({ spacing }: Theme) {
     },
     enroll: {
       width: '24%',
-    },
-    image: {
 
-    }
+      '&::before': {
+        content: '""',
+        position: 'relative',
+        top: '30%',
+        left: '80%',
+        borderTop: `1px dashed ${colors.darkBlue}`,
+        width: '118%',
+        zIndex: 1
+      },
+
+      '&:last-of-type': {
+        '&::before': {
+          content: '""',
+          position: 'relative',
+          border: 'none',
+          zIndex: 2
+        },
+      }
+    },
+    image: {}
   });
 }

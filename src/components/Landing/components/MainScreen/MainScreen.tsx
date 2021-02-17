@@ -59,7 +59,7 @@ const MainScreen = (props: MainScreenProps) => {
   const signOut = () => {
 
     // @ts-ignore
-    const auth2 = window.gapi.auth2.getAuthInstance();
+    const auth2 = window.gapi?.auth2.getAuthInstance();
     auth2.signOut().then(function() {
       console.log('User signed out.');
       setAuth(false);
