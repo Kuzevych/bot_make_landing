@@ -1,11 +1,12 @@
 import { createStyles, Theme } from '@material-ui/core/styles';
+
 import { colors } from "shared/constants/colors";
 
 export default function styles({ spacing }: Theme) {
   return createStyles({
     root: {
       maxHeight: 550,
-      background: 'linear-gradient(to right, #090A19, #24295B)',
+      background: `linear-gradient(to right, ${colors.lightBlack},  ${colors.lightBlue})`,
       color: 'white'
     },
     container: {
@@ -33,10 +34,11 @@ export default function styles({ spacing }: Theme) {
           content: '""',
           position: 'relative',
           border: 'none',
-          zIndex: 2
         },
       }
     },
-    image: {}
+    image: {
+      zIndex: 2
+    }
   });
 }

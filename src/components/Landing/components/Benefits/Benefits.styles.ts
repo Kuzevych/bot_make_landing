@@ -9,7 +9,7 @@ export default function styles({ spacing }: Theme) {
     benefit: {
       marginTop: 0,
 
-      '&:nth-child(odd)': {
+      '&:nth-child(even)': {
         flexDirection: 'row-reverse'
       }
     }
