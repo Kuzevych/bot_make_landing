@@ -1,5 +1,6 @@
-import { createStyles, Theme } from "@material-ui/core/styles";
-import { colors } from "shared/constants/colors";
+import { createStyles, Theme } from '@material-ui/core/styles';
+
+import { colors } from 'shared/constants/colors';
 
 
 export default function styles({ spacing }: Theme) {

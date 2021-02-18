@@ -10,9 +10,9 @@ import cert2 from 'shared/images/certification/cert2.png';
 import cert3 from 'shared/images/certification/cert3.png';
 import cert4 from 'shared/images/certification/cert4.png';
 import badges from 'shared/images/certification/badges.png';
+import Advantage from 'shared/components/Advantage';
 
 import styles from './Certifications.styles';
-import Advantage from '../../../../shared/components/Advantage';
 
 export interface CertificationsProps extends WithStyles<typeof styles> {}
 

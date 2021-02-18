@@ -2,7 +2,7 @@ import * as React from 'react';
 import { WithStyles, withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 
-import { AdvantageI } from '../../../../shared/components/Advantage';
+import { AdvantageI } from 'shared/components/Advantage';
 import Program from './Program';
 import HeaderSection from "shared/components/HeaderSection";
 
