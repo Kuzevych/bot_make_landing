@@ -47,7 +47,7 @@ const Reviews = ({ classes }: ReviewsProp) => {
             {
               imagesConfig.slice(0, imagesConfig.length/2).map(({ image }) =>
                 <div className={classes.review} key={image}>
-                  <img src={image} alt='img' />
+                  <img src={image} alt='img' className={classes.image}/>
                 </div>
               )
             }
@@ -56,7 +56,7 @@ const Reviews = ({ classes }: ReviewsProp) => {
             {
               imagesConfig.slice(imagesConfig.length/2).map(({ image }) =>
                 <div className={classes.review} key={image}>
-                  <img src={image} alt='img' />
+                  <img src={image} alt='img' className={classes.image}/>
                 </div>
               )
             }

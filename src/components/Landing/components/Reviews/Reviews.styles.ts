@@ -37,6 +37,10 @@ export default function styles({ spacing }: Theme) {
       '&:first-of-type': {
         marginTop: 0,
       }
+    },
+    image: {
+      width: '100%',
+      objectFit: 'contain'
     }
   });
 }
