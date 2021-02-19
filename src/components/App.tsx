@@ -1,7 +1,6 @@
 import * as React from "react";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import { createMuiTheme, CssBaseline, ThemeProvider } from "@material-ui/core";
 import { WithStyles, withStyles } from "@material-ui/styles";
-
 import Landing from "./Landing";
 
 import styles from './App.styles';
@@ -15,6 +14,7 @@ const App: React.FC<AppProps> = (props: AppProps) => {
   const { classes } = props;
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Landing classes={{ root: classes.root }}/>
     </ThemeProvider>
   );

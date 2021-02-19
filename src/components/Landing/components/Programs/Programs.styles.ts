@@ -10,7 +10,6 @@ export default function styles({ spacing }: Theme) {
     },
     program: {
       marginRight: spacing(4),
-      width: '24%',
 
       '&:last-of-type': {
         marginRight: 0
