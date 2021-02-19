@@ -7,8 +7,6 @@ export default function styles() {
     textContainer: {
       maxWidth: '35%'
     },
-    image: {
-      maxHeight: 368
-    }
+    image: {}
   });
 }

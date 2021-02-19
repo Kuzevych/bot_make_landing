@@ -1,10 +1,12 @@
 import { createStyles, Theme } from '@material-ui/core/styles';
 
+import { colors } from "shared/constants/colors";
+
 const styles = ({ spacing }: Theme) => {
   return createStyles({
     root: {
       height: '100vh',
-      background: 'linear-gradient(to right, #090A19, #24295B)',
+      background: `linear-gradient(to right, ${colors.lightBlack},  ${colors.lightBlue})`,
       color: 'white'
     },
     container: {

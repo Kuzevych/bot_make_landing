@@ -8,7 +8,7 @@ import styles from './SearchInput.styles';
 export interface SearchInputProps extends WithStyles<typeof styles> {
 }
 
-function SearchInput ({ classes }: SearchInputProps): React.ReactElement {
+const SearchInput = ({ classes }: SearchInputProps) => {
   let [searchValue, setSearchValue] = React.useState('');
 
   const handleSubmit = (e: any) => {
@@ -36,8 +36,7 @@ function SearchInput ({ classes }: SearchInputProps): React.ReactElement {
         <SearchIcon classes={{ root: classes.icon }}/>
       </IconButton>
     </Paper>
-
   );
-}
+};
 
 export default withStyles(styles)(SearchInput);

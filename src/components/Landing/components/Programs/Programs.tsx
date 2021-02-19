@@ -2,8 +2,9 @@ import * as React from 'react';
 import { WithStyles, withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 
-import { AdvantageI } from './Program/components/Advantage';
+import { AdvantageI } from 'shared/components/Advantage';
 import Program from './Program';
+import HeaderSection from "shared/components/HeaderSection";
 
 import styles from "./Programs.styles";
 
@@ -18,7 +19,7 @@ interface ProgramsConfig {
   advantage: AdvantageI[];
 }
 
-function Programs ({ classes, title }: ProgramsProps): React.ReactElement {
+const Programs = ({ classes, title }: ProgramsProps) => {
 
   const programsConfig: ProgramsConfig[] = React.useMemo(()=>{
     return [
@@ -37,7 +38,10 @@ function Programs ({ classes, title }: ProgramsProps): React.ReactElement {
             value: 'Pass more test, get more certificate',
             label: true
           }
-        ]
+        ],
+        classes: {
+          root: classes.program
+        },
       },
       {
         title: 'Chatbot Developer Certified Expert',
@@ -55,7 +59,10 @@ function Programs ({ classes, title }: ProgramsProps): React.ReactElement {
             label: true
           },
           { value: 'The ability to pass the test for two or more professionals ' },
-        ]
+        ],
+        classes: {
+          root: classes.program
+        },
       },
       {
         title: 'Chatbot Developer Certified Master',
@@ -73,7 +80,10 @@ function Programs ({ classes, title }: ProgramsProps): React.ReactElement {
             label: true
           },
           { value: 'The ability to pass the test for two or more professionals ' }
-        ]
+        ],
+        classes: {
+          root: classes.program
+        },
       }
     ];
   },[]);
@@ -85,16 +95,16 @@ function Programs ({ classes, title }: ProgramsProps): React.ReactElement {
 
   return (
     <Box display="flex" className={classes.root} flexDirection="column">
-      <h2 className={classes.title}> {title} </h2>
+      <HeaderSection title={title}/>
       <Box display="flex" justifyContent="space-between" className={classes.programs}>
         {
-          programsConfig.map((config) =>
-            <Program classes={{ root: classes.program }} key={Math.random()} {...config} onSubmit={handleSubmit} />
+          programsConfig.map((config, idx) =>
+            <Program key={config.title + idx} {...config} onSubmit={handleSubmit} />
           )
         }
       </Box>
     </Box>
   );
-}
+};
 
 export default withStyles(styles)(Programs);

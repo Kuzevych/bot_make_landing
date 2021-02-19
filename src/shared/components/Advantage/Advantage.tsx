@@ -15,7 +15,7 @@ export interface AdvantageI {
 
 export interface AdvantageProps extends WithStyles<typeof styles>, AdvantageI {}
 
-function Advantage ({ value, addInfo, label, classes }: AdvantageProps): React.ReactElement {
+const Advantage = ({ value, addInfo, label, classes }: AdvantageProps) => {
   return(
     <Box display="flex" alignItems="flex-start" className={classes.root}>
       <MarkIcon classes={{ root: classes.icon }} />
@@ -26,6 +26,6 @@ function Advantage ({ value, addInfo, label, classes }: AdvantageProps): React.R
       </span>
     </Box>
   );
-}
+};
 
 export default withStyles(styles)(Advantage);

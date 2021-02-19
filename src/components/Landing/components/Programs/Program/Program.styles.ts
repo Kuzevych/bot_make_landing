@@ -1,11 +1,12 @@
-import { createStyles, Theme } from "@material-ui/core/styles";
-import { colors } from "shared/constants/colors";
+import { createStyles, Theme } from '@material-ui/core/styles';
+
+import { colors } from 'shared/constants/colors';
 
 
 export default function styles({ spacing }: Theme) {
   return createStyles({
     root:{
-      padding: spacing(12),
+      padding: spacing(4),
       borderRadius: 8,
       backgroundColor: colors.white2,
 

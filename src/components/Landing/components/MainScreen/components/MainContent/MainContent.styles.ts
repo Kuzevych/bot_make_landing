@@ -26,7 +26,6 @@ export default function styles({ spacing }: Theme) {
       marginTop: spacing(8)
     },
     image: {
-      maxWidth: 440,
       height: 'auto'
     }
   });

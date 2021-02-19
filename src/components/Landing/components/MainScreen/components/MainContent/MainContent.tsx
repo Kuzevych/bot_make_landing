@@ -1,19 +1,36 @@
 import * as React from 'react';
 import { withStyles, WithStyles } from "@material-ui/core/styles";
-import { Box, Button, Dialog, DialogTitle } from "@material-ui/core";
+import { Box, Button } from "@material-ui/core";
 
-// @ts-ignore
 import bot from 'shared/images/bot.png';
 
 import styles from "./MainContent.styles";
 
-export interface MainContentProps extends WithStyles<typeof styles> {}
+export interface MainContentProps extends WithStyles<typeof styles> {
+  isAuth: boolean;
+  onLogin: () => any;
+  onLogout: () => any;
+}
 
-function MainContent({ classes }: MainContentProps): React.ReactElement {
-  let [open, setOpen] = React.useState(false);
 
-  const handleOpen = React.useCallback(()=> setOpen(true),[]);
-  const handleClose = React.useCallback(()=> setOpen(false),[]);
+const MainContent = ({ classes, onLogin, onLogout, isAuth }: MainContentProps) => {
+
+  const authConfig = () => {
+    const config = [
+      {
+        isAuth: isAuth,
+        buttonText: 'Logout',
+        action: onLogout
+      },
+      {
+        isAuth: !isAuth,
+        buttonText: 'Login',
+        action: onLogin
+      },
+    ];
+
+    return config.find((config) => config.isAuth);
+  };
 
   return(
     <Box display="flex" flexDirection="row" justifyContent="space-between" alignItems="center" className={classes.root}>
@@ -24,15 +41,12 @@ function MainContent({ classes }: MainContentProps): React.ReactElement {
           variant="contained"
           color="primary"
           className={classes.startButton}
-          onClick={handleOpen}
-        >get started</Button>
+          onClick={authConfig()?.action}
+        >{authConfig()?.buttonText}</Button>
       </Box>
       <img src={bot} alt="" className={classes.image} />
-      <Dialog open={open} onClose={handleClose}>
-        <DialogTitle id="simple-dialog-title">Dialog</DialogTitle>
-      </Dialog>
     </Box>
   );
-}
+};
 
 export default withStyles(styles)(MainContent);

@@ -14,7 +14,7 @@ export interface config {
   component?: React.ReactNode;
 }
 
-function NavMenu ({ classes }: NavMenuProps): React.ReactElement {
+const NavMenu = ({ classes }: NavMenuProps) => {
   const [anchorEl, setAnchorEl] = React.useState<SVGSVGElement | null>(null);
 
   const handlePopover = (e: React.MouseEvent<SVGSVGElement>) => {
@@ -69,6 +69,6 @@ function NavMenu ({ classes }: NavMenuProps): React.ReactElement {
       )}
     </Box>
   );
-}
+};
 
 export default withStyles(styles)(NavMenu);

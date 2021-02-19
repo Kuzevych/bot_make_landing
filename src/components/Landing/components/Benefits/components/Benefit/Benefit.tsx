@@ -10,7 +10,7 @@ export interface BenefitProps extends WithStyles<typeof styles> {
   image: any;
 }
 
-function Benefit ({ classes, title, description, image }:BenefitProps ): React.ReactElement {
+const Benefit = ({ classes, title, description, image }:BenefitProps ) => {
   return(
     <Box display="flex" className={classes.root} justifyContent="space-between" alignItems="center">
       <div className={classes.textContainer}>
@@ -20,6 +20,6 @@ function Benefit ({ classes, title, description, image }:BenefitProps ): React.R
       <img src={image} alt="image" className={classes.image} />
     </Box>
   );
-}
+};
 
 export default withStyles(styles)(Benefit);

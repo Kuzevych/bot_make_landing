@@ -17,7 +17,7 @@ interface bottomConfigI {
   text: string;
 }
 
-function BottomContent({ classes }: BottomContentProps): React.ReactElement {
+const BottomContent = ({ classes }: BottomContentProps) => {
 
   const bottomConfig: bottomConfigI[] = React.useMemo(()=>{
     return [
@@ -53,6 +53,6 @@ function BottomContent({ classes }: BottomContentProps): React.ReactElement {
       )}
     </Box>
   );
-}
+};
 
 export default withStyles(styles)(BottomContent);

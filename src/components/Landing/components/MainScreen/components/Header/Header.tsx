@@ -9,7 +9,7 @@ import styles from './Header.styles';
 export interface HeaderProps extends WithStyles<typeof styles> {
 }
 
-function Header ( props: HeaderProps ) {
+const Header = ( props: HeaderProps ) => {
   const { classes } = props;
 
   return(
@@ -22,6 +22,6 @@ function Header ( props: HeaderProps ) {
       <NavMenu />
     </Box>
   );
-}
+};
 
 export default withStyles(styles)(Header);
