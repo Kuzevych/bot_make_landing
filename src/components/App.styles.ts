@@ -7,6 +7,10 @@ export default function style () {
       body: {
         margin: '0',
         fontFamily: '"Comic Sans MS", sans-serif'
+      },
+
+      'h2, p': {
+        margin: 0
       }
     },
     root: {}

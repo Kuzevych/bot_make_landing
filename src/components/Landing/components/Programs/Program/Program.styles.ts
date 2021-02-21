@@ -25,6 +25,9 @@ export default function styles({ spacing }: Theme) {
     currency: {
       fontWeight: 200
     },
+    price: {
+      marginTop: spacing(4)
+    },
     period: {
       fontSize: 17,
       fontWeight: 200

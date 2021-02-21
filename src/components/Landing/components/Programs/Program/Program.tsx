@@ -40,7 +40,7 @@ const Program = ({ classes, price, title, description, advantage, onSubmit }: Pr
       <div className={classes.topContainer}>
         <span className={classes.titleContainer}>
           <h4 className={classes.currency}><sup>$</sup></h4>
-          <h2>{price}</h2>
+          <h2 className={classes.price}>{price}</h2>
           <h4 className={classes.period}><sub>/year</sub></h4>
         </span>
         <h2 className={classes.subtitle}>{title}</h2>

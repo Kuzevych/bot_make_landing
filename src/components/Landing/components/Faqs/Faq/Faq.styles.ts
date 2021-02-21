@@ -11,6 +11,8 @@ export default function styles({ spacing }: Theme) {
       fontSize: 24,
       fontWeight: 700
     },
-    description: {}
+    description: {
+      marginTop: spacing(4)
+    }
   });
 }
