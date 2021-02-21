@@ -24,6 +24,7 @@ export default function styles({ spacing }: Theme) {
     icon: {
       marginRight: spacing(7),
       marginTop: spacing(7),
+      cursor: 'pointer'
     }
   });
 }
