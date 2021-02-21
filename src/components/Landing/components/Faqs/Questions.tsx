@@ -5,16 +5,16 @@ import Box from '@material-ui/core/Box';
 import HeaderSection from 'shared/components/HeaderSection';
 import Faq from './Faq';
 
-import styles from './Faqs.styles';
+import styles from './Questions.styles';
 
-export interface FaqsProps extends WithStyles<typeof styles> {}
+export interface QuestionsProps extends WithStyles<typeof styles> {}
 
 export interface Question {
   question: string;
   answer: string;
 }
 
-const Faqs = ({ classes }: FaqsProps) => {
+const Questions = ({ classes }: QuestionsProps) => {
 
   const questionConfig: Question[] = React.useMemo(()=>{
     return [
@@ -52,4 +52,4 @@ const Faqs = ({ classes }: FaqsProps) => {
   );
 };
 
-export default withStyles(styles)(Faqs);
+export default withStyles(styles)(Questions);

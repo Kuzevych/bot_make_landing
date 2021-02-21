@@ -1,2 +1,2 @@
-export * from './Faqs';
-export { default } from './Faqs';
+export * from './Questions';
+export { default } from './Questions';

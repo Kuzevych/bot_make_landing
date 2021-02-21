@@ -1,7 +1,7 @@
 import * as React from 'react';
 import withStyles, { WithStyles } from '@material-ui/core/styles/withStyles';
 
-import { Question } from '../Faqs';
+import { Question } from '../Questions';
 
 import styles from './Faq.styles';
 
