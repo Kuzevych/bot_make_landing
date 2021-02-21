@@ -7,8 +7,8 @@ export default function style ({ spacing }: Theme) {
       padding: spacing(2, 4),
       display: 'flex',
       alignItems: 'center',
-      width: 240,
-      height: 15,
+      width: 200,
+      height: 24,
       background: fade(colors.white, 0.1),
       border: `1px solid ${colors.grey}`
     },
