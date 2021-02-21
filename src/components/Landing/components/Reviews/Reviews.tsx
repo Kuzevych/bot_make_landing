@@ -19,7 +19,6 @@ import styles from './Reviews.styles';
 export interface ReviewsProp extends WithStyles<typeof styles> {}
 
 const Reviews = ({ classes }: ReviewsProp) => {
-
   const imagesConfig: Array<{ image: any }> = React.useMemo(() => {
     return [
       { image: image1 },

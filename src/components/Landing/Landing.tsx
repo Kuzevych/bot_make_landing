@@ -10,6 +10,7 @@ import Certifications from './components/Certifications';
 import Reviews from './components/Reviews';
 
 import styles from './Landing.styles';
+import Faqs from './components/Faqs';
 
 export interface LandingProps extends WithStyles<typeof styles> {}
 
@@ -30,6 +31,7 @@ const Landing = (props: LandingProps) => {
       <Programs
         title="Ready to start?"
       />
+      <Faqs />
     </Box>
   );
 };
