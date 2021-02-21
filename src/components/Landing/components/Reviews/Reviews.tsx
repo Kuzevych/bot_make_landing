@@ -43,15 +43,15 @@ const Reviews = ({ classes }: ReviewsProp) => {
         />
         <Box display="flex" flexDirection='row' justifyContent='space-between' className={classes.reviewContainer}>
           <Box display="flex" flexDirection="column" className={classes.reviewsLeft}>
-            {imagesConfig.slice(0, imagesConfig.length/2).map(({ image }) =>
-              <div className={classes.review} key={image}>
+            {imagesConfig.slice(0, imagesConfig.length/2).map(({ image }, idx) =>
+              <div className={classes.review} key={image + idx}>
                 <img src={image} alt='img' className={classes.image}/>
               </div>
             )}
           </Box>
           <Box display="flex" flexDirection="column" className={classes.reviewsLeft}>
-            {imagesConfig.slice(imagesConfig.length/2).map(({ image }) =>
-              <div className={classes.review} key={image}>
+            {imagesConfig.slice(imagesConfig.length/2).map(({ image }, idx) =>
+              <div className={classes.review} key={image + idx}>
                 <img src={image} alt='img' className={classes.image}/>
               </div>
             )}
