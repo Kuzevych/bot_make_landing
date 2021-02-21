@@ -10,7 +10,7 @@ import Certifications from './components/Certifications';
 import Reviews from './components/Reviews';
 
 import styles from './Landing.styles';
-import Faqs from './components/Faqs';
+import Faqs from './components/Questions';
 
 export interface LandingProps extends WithStyles<typeof styles> {}
 
