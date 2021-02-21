@@ -43,7 +43,7 @@ const Questions = ({ classes }: QuestionsProps) => {
       <HeaderSection
         title='Certification FAQs'
       />
-      <Box display='flex' flexDirection='column'>
+      <Box display="flex" flexDirection="column">
         {questionConfig.map((question) =>
           <Faq key={question.question} {...question} />
         )}

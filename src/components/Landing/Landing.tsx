@@ -8,9 +8,10 @@ import Benefits from './components/Benefits';
 import Enroll from './components/Enroll';
 import Certifications from './components/Certifications';
 import Reviews from './components/Reviews';
+import Questions from './components/Questions';
+import Footer from './components/Footer';
 
 import styles from './Landing.styles';
-import Faqs from './components/Questions';
 
 export interface LandingProps extends WithStyles<typeof styles> {}
 
@@ -83,7 +84,8 @@ const Landing = (props: LandingProps) => {
       <Programs
         title="Ready to start?"
       />
-      <Faqs />
+      <Questions />
+      <Footer />
     </Box>
   );
 };

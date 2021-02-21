@@ -41,15 +41,15 @@ const Reviews = ({ classes }: ReviewsProp) => {
           title='Still not sure?'
           description="Here's what just a few of those people think about Botmakers…"
         />
-        <Box display='flex' flexDirection='row' justifyContent='space-between' className={classes.reviewContainer}>
-          <Box display='flex' flexDirection='column' className={classes.reviewsLeft}>
+        <Box display="flex" flexDirection='row' justifyContent='space-between' className={classes.reviewContainer}>
+          <Box display="flex" flexDirection="column" className={classes.reviewsLeft}>
             {imagesConfig.slice(0, imagesConfig.length/2).map(({ image }) =>
               <div className={classes.review} key={image}>
                 <img src={image} alt='img' className={classes.image}/>
               </div>
             )}
           </Box>
-          <Box display='flex' flexDirection='column' className={classes.reviewsLeft}>
+          <Box display="flex" flexDirection="column" className={classes.reviewsLeft}>
             {imagesConfig.slice(imagesConfig.length/2).map(({ image }) =>
               <div className={classes.review} key={image}>
                 <img src={image} alt='img' className={classes.image}/>
