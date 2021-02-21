@@ -12,14 +12,13 @@ import image6 from 'shared/images/reviews/image6.png';
 import image7 from 'shared/images/reviews/image7.png';
 import image8 from 'shared/images/reviews/image8.png';
 import image9 from 'shared/images/reviews/image9.png';
-
 import image10 from 'shared/images/reviews/image10.png';
+
 import styles from './Reviews.styles';
 
 export interface ReviewsProp extends WithStyles<typeof styles> {}
 
 const Reviews = ({ classes }: ReviewsProp) => {
-
   const imagesConfig: Array<{ image: any }> = React.useMemo(() => {
     return [
       { image: image1 },
@@ -42,24 +41,20 @@ const Reviews = ({ classes }: ReviewsProp) => {
           title='Still not sure?'
           description="Here's what just a few of those people think about Botmakers…"
         />
-        <Box display='flex' flexDirection='row' justifyContent='space-between' className={classes.reviewContainer}>
-          <Box display='flex' flexDirection='column' className={classes.reviewsLeft}>
-            {
-              imagesConfig.slice(0, imagesConfig.length/2).map(({ image }) =>
-                <div className={classes.review} key={image}>
-                  <img src={image} alt='img' className={classes.image}/>
-                </div>
-              )
-            }
+        <Box display="flex" flexDirection='row' justifyContent='space-between' className={classes.reviewContainer}>
+          <Box display="flex" flexDirection="column" className={classes.reviewsLeft}>
+            {imagesConfig.slice(0, imagesConfig.length/2).map(({ image }) =>
+              <div className={classes.review} key={image}>
+                <img src={image} alt='img' className={classes.image}/>
+              </div>
+            )}
           </Box>
-          <Box display='flex' flexDirection='column' className={classes.reviewsLeft}>
-            {
-              imagesConfig.slice(imagesConfig.length/2).map(({ image }) =>
-                <div className={classes.review} key={image}>
-                  <img src={image} alt='img' className={classes.image}/>
-                </div>
-              )
-            }
+          <Box display="flex" flexDirection="column" className={classes.reviewsLeft}>
+            {imagesConfig.slice(imagesConfig.length/2).map(({ image }) =>
+              <div className={classes.review} key={image}>
+                <img src={image} alt='img' className={classes.image}/>
+              </div>
+            )}
           </Box>
         </Box>
       </div>
