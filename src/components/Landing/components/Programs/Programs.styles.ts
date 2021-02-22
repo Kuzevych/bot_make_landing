@@ -43,6 +43,9 @@ export default function styles({ spacing, breakpoints }: Theme) {
       programs: {
         flexDirection: 'column'
       },
+      program: {
+        margin: spacing(2, 0, 2)
+      },
       programTitle: {
         justifyContent: 'center'
       }

@@ -40,7 +40,8 @@ const Programs = ({ classes, title }: ProgramsProps) => {
           }
         ],
         classes: {
-          root: classes.program
+          root: classes.program,
+          titleContainer: classes.programTitle
         },
       },
       {
@@ -61,7 +62,8 @@ const Programs = ({ classes, title }: ProgramsProps) => {
           { value: 'The ability to pass the test for two or more professionals ' },
         ],
         classes: {
-          root: classes.program
+          root: classes.program,
+          titleContainer: classes.programTitle
         },
       },
       {
@@ -82,7 +84,8 @@ const Programs = ({ classes, title }: ProgramsProps) => {
           { value: 'The ability to pass the test for two or more professionals ' }
         ],
         classes: {
-          root: classes.program
+          root: classes.program,
+          titleContainer: classes.programTitle
         },
       }
     ];
@@ -99,7 +102,7 @@ const Programs = ({ classes, title }: ProgramsProps) => {
       <Box display="flex" justifyContent="space-between" className={classes.programs}>
         {
           programsConfig.map((config, idx) =>
-            <Program classes={{ titleContainer: classes.programTitle }} key={config.title + idx} {...config} onSubmit={handleSubmit} />
+            <Program key={config.title + idx} {...config} onSubmit={handleSubmit} />
           )
         }
       </Box>
