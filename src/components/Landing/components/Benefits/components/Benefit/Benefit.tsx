@@ -14,8 +14,8 @@ const Benefit = ({ classes, title, description, image }:BenefitProps ) => {
   return(
     <Box display="flex" className={classes.root} justifyContent="space-between" alignItems="center">
       <div className={classes.textContainer}>
-        <h2>{title}</h2>
-        <p>{description}</p>
+        <h2 className={classes.title}>{title}</h2>
+        <p className={classes.description}>{description}</p>
       </div>
       <img src={image} alt="image" className={classes.image} />
     </Box>

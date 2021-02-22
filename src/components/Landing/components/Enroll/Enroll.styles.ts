@@ -1,8 +1,9 @@
 import { createStyles, Theme } from '@material-ui/core/styles';
 
 import { colors } from 'shared/constants/colors';
+import { screenSize } from 'shared/constants/breakpoints';
 
-export default function styles({ spacing }: Theme) {
+export default function styles({ spacing, breakpoints }: Theme) {
   return createStyles({
     root: {
       background: `linear-gradient(to right, ${colors.lightBlack},  ${colors.lightBlue})`,
@@ -38,6 +39,67 @@ export default function styles({ spacing }: Theme) {
     },
     image: {
       zIndex: 2
+    },
+    enrollText: {
+      fontSize: 18
+    },
+    [breakpoints.up(screenSize.xl)]: {
+      container: {
+        margin: spacing(12, 'auto', 0),
+        maxWidth: '60%',
+        width: '60%',
+        padding: 0
+      },
+      image: {
+        height: 180
+      },
+      enrollText: {
+        fontSize: 21
+      },
+    },
+    [breakpoints.down(screenSize.lg)]: {
+      container: {
+        margin: spacing(12, 20),
+        padding: spacing(4, 0, 0)
+      },
+    },
+    [breakpoints.down(screenSize.md)]: {
+      container: {
+        margin: spacing(4, 10)
+      },
+      enroll: {
+        '&::before': {
+          content: '""',
+          position: 'absolute',
+          border: 'none',
+        },
+        '&:last-of-type': {
+          '&::before': {
+            content: '""',
+            position: 'absolute',
+            border: 'none',
+          },
+        }
+      },
+      image: {
+        margin: spacing(0, 4, 4, 0)
+      }
+    },
+    [breakpoints.down(screenSize.sm)]: {
+      container: {
+        margin: spacing(0, 3)
+      },
+      enrolls: {
+        flexDirection: 'column'
+      },
+      enroll: {
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        width: 'auto'
+      },
+      image: {
+        height: 130
+      }
     }
   });
 }

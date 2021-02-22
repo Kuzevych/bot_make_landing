@@ -24,7 +24,7 @@ const Benefits = ({ classes }: BenefitsProps) => {
       {
         title: 'Certification benefits\n',
         description: 'Certification is an efficient way to gain a competitive advantage and improve your professional credibility. ',
-        image: illustration1
+        image: illustration1,
       },
       {
         title: 'Showcase your company in front of the clients',
@@ -42,7 +42,13 @@ const Benefits = ({ classes }: BenefitsProps) => {
           <Benefit
             key={benefit.title}
             {...benefit}
-            classes={{ root: classes.benefit }}
+            classes={{
+              root: classes.benefit,
+              image: classes.image,
+              textContainer: classes.textContainer,
+              description: classes.description,
+              title: classes.title
+            }}
           />
         )
       }

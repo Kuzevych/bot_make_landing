@@ -6,7 +6,8 @@ export default function styles({ spacing }: Theme) {
     root: {},
     title: {
       fontSize: 16,
-      fontWeight: 600
+      fontWeight: 600,
+      marginTop: 0
     },
     link: {
       fontSize: 12,

@@ -45,7 +45,7 @@ const Enroll = ({ classes }: EnrollProps) => {
             enrollConfig.map(({ text, image })=>
               <Box key={text} display="flex" flexDirection="column" alignItems="center" className={classes.enroll}>
                 <img src={image} alt="" className={classes.image}/>
-                <p>{text}</p>
+                <p className={classes.enrollText}>{text}</p>
               </Box>
             )
           }

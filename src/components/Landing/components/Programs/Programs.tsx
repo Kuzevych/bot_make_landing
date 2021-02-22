@@ -40,7 +40,8 @@ const Programs = ({ classes, title }: ProgramsProps) => {
           }
         ],
         classes: {
-          root: classes.program
+          root: classes.program,
+          titleContainer: classes.programTitle
         },
       },
       {
@@ -61,7 +62,8 @@ const Programs = ({ classes, title }: ProgramsProps) => {
           { value: 'The ability to pass the test for two or more professionals ' },
         ],
         classes: {
-          root: classes.program
+          root: classes.program,
+          titleContainer: classes.programTitle
         },
       },
       {
@@ -82,7 +84,8 @@ const Programs = ({ classes, title }: ProgramsProps) => {
           { value: 'The ability to pass the test for two or more professionals ' }
         ],
         classes: {
-          root: classes.program
+          root: classes.program,
+          titleContainer: classes.programTitle
         },
       }
     ];
@@ -94,7 +97,7 @@ const Programs = ({ classes, title }: ProgramsProps) => {
   };
 
   return (
-    <Box display="flex" className={classes.root} flexDirection="column">
+    <Box display="flex" flexDirection="column" className={classes.root}>
       <HeaderSection title={title}/>
       <Box display="flex" justifyContent="space-between" className={classes.programs}>
         {
