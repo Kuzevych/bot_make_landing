@@ -38,7 +38,7 @@ export default function styles({ spacing, breakpoints }: Theme) {
     },
     [breakpoints.down(screenSize.sm)]: {
       root: {
-        margin: spacing(0, 2)
+        margin: spacing(0, 3)
       },
       programs: {
         flexDirection: 'column'

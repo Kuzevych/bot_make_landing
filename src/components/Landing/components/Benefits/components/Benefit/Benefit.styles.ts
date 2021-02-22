@@ -5,7 +5,7 @@ export default function styles() {
   return createStyles({
     root: {},
     textContainer: {
-      maxWidth: '35%'
+      maxWidth: '50%'
     },
     image: {}
   });
