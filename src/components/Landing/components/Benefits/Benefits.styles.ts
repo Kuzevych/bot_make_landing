@@ -22,6 +22,12 @@ export default function styles({ spacing, breakpoints }: Theme) {
         width: '60%',
         padding: 0
       },
+      description: {
+        fontSize: 21
+      },
+      title: {
+        fontSize: 28
+      }
     },
     [breakpoints.down(screenSize.lg)]: {
       root: {

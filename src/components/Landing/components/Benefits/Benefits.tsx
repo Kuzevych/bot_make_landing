@@ -45,7 +45,9 @@ const Benefits = ({ classes }: BenefitsProps) => {
             classes={{
               root: classes.benefit,
               image: classes.image,
-              textContainer: classes.textContainer
+              textContainer: classes.textContainer,
+              description: classes.description,
+              title: classes.title
             }}
           />
         )

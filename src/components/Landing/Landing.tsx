@@ -5,7 +5,7 @@ import { Box } from '@material-ui/core';
 import MainScreen from './components/MainScreen';
 import Programs from './components/Programs';
 import Benefits from './components/Benefits';
-// import Enroll from './components/Enroll';
+import Enroll from './components/Enroll';
 // import Certifications from './components/Certifications';
 // import Reviews from './components/Reviews';
 // import Questions from './components/Questions';
@@ -26,7 +26,7 @@ const Landing = (props: LandingProps) => {
         title="Choose your program"
       />
       <Benefits />
-      {/*<Enroll />*/}
+      <Enroll />
       {/*<Certifications/>*/}
       {/*<Reviews />*/}
       {/*<Programs*/}

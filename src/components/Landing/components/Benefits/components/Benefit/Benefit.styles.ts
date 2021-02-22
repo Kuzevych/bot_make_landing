@@ -7,6 +7,8 @@ export default function styles() {
     textContainer: {
       maxWidth: '50%'
     },
-    image: {}
+    image: {},
+    title: {},
+    description: {}
   });
 }
