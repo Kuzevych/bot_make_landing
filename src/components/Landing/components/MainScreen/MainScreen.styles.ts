@@ -17,7 +17,7 @@ const styles = ({ spacing, breakpoints }: Theme) => {
     [breakpoints.up(screenSize.xl)]: {
       container: {
         margin: 'auto',
-        maxWidth: '40%'
+        maxWidth: '60%'
       },
     },
     [breakpoints.down(screenSize.lg)]: {

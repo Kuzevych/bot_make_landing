@@ -38,11 +38,11 @@ const Program = ({ classes, price, title, description, advantage, onSubmit }: Pr
   return (
     <Box display="flex" flexDirection="column" justifyContent="space-between" className={classes.root}>
       <div className={classes.topContainer}>
-        <span className={classes.titleContainer}>
+        <Box display="flex" className={classes.titleContainer}>
           <h4 className={classes.currency}><sup>$</sup></h4>
           <h2 className={classes.price}>{price}</h2>
           <h4 className={classes.period}><sub>/year</sub></h4>
-        </span>
+        </Box>
         <h2 className={classes.subtitle}>{title}</h2>
         <p className={classes.forWhom}>{description}</p>
         {

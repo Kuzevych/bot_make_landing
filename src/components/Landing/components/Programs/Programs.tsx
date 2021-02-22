@@ -94,12 +94,12 @@ const Programs = ({ classes, title }: ProgramsProps) => {
   };
 
   return (
-    <Box display="flex" className={classes.root} flexDirection="column">
+    <Box display="flex" flexDirection="column" className={classes.root}>
       <HeaderSection title={title}/>
       <Box display="flex" justifyContent="space-between" className={classes.programs}>
         {
           programsConfig.map((config, idx) =>
-            <Program key={config.title + idx} {...config} onSubmit={handleSubmit} />
+            <Program classes={{ titleContainer: classes.programTitle }} key={config.title + idx} {...config} onSubmit={handleSubmit} />
           )
         }
       </Box>
