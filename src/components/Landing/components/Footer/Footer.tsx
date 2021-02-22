@@ -91,9 +91,9 @@ const Footer = ({ classes }: FooterProps) => {
   },[]);
 
   const iconsConfig = [
-    { icon: <FacebookIcon classes={{ root: classes.icon }}/> },
-    { icon: <LinkedInIcon classes={{ root: classes.icon }}/> },
-    { icon: <YouTubeIcon classes={{ root: classes.icon }}/> },
+    { icon: <FacebookIcon classes={{ root: classes.icon }}/>, id: Math.random() },
+    { icon: <LinkedInIcon classes={{ root: classes.icon }}/>, id: Math.random() },
+    { icon: <YouTubeIcon classes={{ root: classes.icon }}/>, id: Math.random() },
   ];
 
   return(
@@ -106,7 +106,7 @@ const Footer = ({ classes }: FooterProps) => {
               Pass the Botmakers certification program. Realize full potential of your marketing agency.
             </p>
             <Box display="flex" justifyContent="flex-start">
-              {iconsConfig.map(({ icon }) => icon)}
+              {iconsConfig.map(({ icon, id }) => <div key={id}>{icon}</div>)}
             </Box>
           </Box>
           {
