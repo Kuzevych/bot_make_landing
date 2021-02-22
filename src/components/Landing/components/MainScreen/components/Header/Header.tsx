@@ -1,7 +1,9 @@
 import * as React from 'react';
-import { Box, withStyles, WithStyles } from "@material-ui/core";
+import { Box, withStyles, WithStyles } from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
+
 import Logo from 'shared/icons/Logo';
-import SearchInput from "./components/SearchInput";
+import SearchInput from './components/SearchInput';
 import NavMenu from './components/NavMenu';
 
 import styles from './Header.styles';
@@ -19,7 +21,8 @@ const Header = ( props: HeaderProps ) => {
         <h3 className={classes.logoText}>botmakers</h3>
       </Box>
       <SearchInput />
-      <NavMenu />
+      <NavMenu classes={{ root: classes.navMenu }}/>
+      <MenuIcon classes={{ root: classes.menuIcon }} />
     </Box>
   );
 };

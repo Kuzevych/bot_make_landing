@@ -60,7 +60,7 @@ const NavMenu = ({ classes }: NavMenuProps) => {
   }, []);
 
   return (
-    <Box display="flex" justifyContent="space-around" alignItems="center">
+    <Box display="flex" justifyContent="space-around" alignItems="center" className={classes.root}>
       {navConfig.map((nav) =>
         <a href="#" className={cx(classes.navItem, { [classes.navItemWithArrow]: nav.component })} key={nav.text}>
           {nav.text}

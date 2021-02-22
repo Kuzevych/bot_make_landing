@@ -10,7 +10,8 @@ export default function style ({ spacing }: Theme) {
       width: 200,
       height: 24,
       background: fade(colors.white, 0.1),
-      border: `1px solid ${colors.grey}`
+      border: `1px solid ${colors.grey}`,
+      margin: spacing('auto', 2)
     },
     input: {
       marginLeft: 4,

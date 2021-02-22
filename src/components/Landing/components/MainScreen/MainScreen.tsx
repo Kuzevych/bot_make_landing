@@ -16,9 +16,24 @@ const MainScreen = (props: MainScreenProps) => {
   return (
     <div className={classes.root}>
       <Box display="flex" flexDirection="column" justifyContent="space-between" className={classes.container}>
-        <Header />
-        <MainContent />
-        <BottomContent />
+        <Header classes={{
+          navMenu: classes.navMenu,
+          menuIcon: classes.menuIcon
+        }} />
+        <MainContent classes={{
+          root: classes.mainScreen,
+          textBlock: classes.mainContentText,
+          image: classes.image,
+          title: classes.title,
+          text: classes.text
+        }} />
+        <BottomContent classes={{
+          root: classes.bottomSection,
+          benefits: classes.benefits,
+          benefitTitle: classes.benefitTitle,
+          benefitText: classes.benefitText
+        }}
+        />
       </Box>
     </div>
   );
