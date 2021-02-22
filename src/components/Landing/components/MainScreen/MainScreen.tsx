@@ -25,7 +25,8 @@ const MainScreen = (props: MainScreenProps) => {
           textBlock: classes.mainContentText,
           image: classes.image,
           title: classes.title,
-          text: classes.text
+          text: classes.text,
+          startButton: classes.startButton
         }} />
         <BottomContent classes={{
           root: classes.bottomSection,

@@ -9,7 +9,7 @@ export default function style () {
         fontFamily: '"Comic Sans MS", sans-serif'
       },
 
-      'h2, p': {
+      'h2, h3, p': {
         margin: 0
       }
     },

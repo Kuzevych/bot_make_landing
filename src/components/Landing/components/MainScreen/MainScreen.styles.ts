@@ -84,6 +84,9 @@ const styles = ({ spacing, breakpoints }: Theme) => {
       },
       benefitText: {
         fontSize: 12
+      },
+      startButton: {
+        width: '90%'
       }
     }
   });

@@ -4,6 +4,7 @@ export default function styles({ spacing }: Theme){
 
   return createStyles({
     root: {
+      marginTop: spacing(2)
     },
     logoText: {
       marginLeft: spacing(2)

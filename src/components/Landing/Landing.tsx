@@ -6,7 +6,7 @@ import MainScreen from './components/MainScreen';
 import Programs from './components/Programs';
 import Benefits from './components/Benefits';
 import Enroll from './components/Enroll';
-// import Certifications from './components/Certifications';
+import Certifications from './components/Certifications';
 // import Reviews from './components/Reviews';
 // import Questions from './components/Questions';
 // import Footer from './components/Footer';
@@ -27,7 +27,7 @@ const Landing = (props: LandingProps) => {
       />
       <Benefits />
       <Enroll />
-      {/*<Certifications/>*/}
+      <Certifications/>
       {/*<Reviews />*/}
       {/*<Programs*/}
       {/*  title="Ready to start?"*/}
