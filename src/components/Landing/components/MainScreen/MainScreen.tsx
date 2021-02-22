@@ -8,8 +8,7 @@ import BottomContent from "./components/BottomContent";
 
 import styles from './MainScreen.styles';
 
-export interface MainScreenProps extends WithStyles<typeof styles> {
-}
+export interface MainScreenProps extends WithStyles<typeof styles> {}
 
 const MainScreen = (props: MainScreenProps) => {
   const { classes } = props;
@@ -19,11 +18,6 @@ const MainScreen = (props: MainScreenProps) => {
       <Box display="flex" flexDirection="column" justifyContent="space-between" className={classes.container}>
         <Header />
         <MainContent />
-        {/*<GoogleLogin*/}
-        {/*  clientId={process.env.GOOGLE_CLIENT_ID}*/}
-        {/*  onSuccess={responseGoogle}*/}
-        {/*  onAutoLoadFinished={()=>console.log('loaded')}*/}
-        {/*/>*/}
         <BottomContent />
       </Box>
     </div>

@@ -7,31 +7,9 @@ import bot from 'shared/images/bot.png';
 
 import styles from "./MainContent.styles";
 
-export interface MainContentProps extends WithStyles<typeof styles> {
-  isAuth?: boolean;
-  onLogin?: () => any;
-  onLogout?: () => any;
-}
-
+export interface MainContentProps extends WithStyles<typeof styles> {}
 
 const MainContent = ({ classes }: MainContentProps) => {
-
-  // const authConfig = () => {
-  //   const config = [
-  //     {
-  //       isAuth: isAuth,
-  //       buttonText: 'Logout',
-  //       action: onLogout
-  //     },
-  //     {
-  //       isAuth: !isAuth,
-  //       buttonText: 'Login',
-  //       action: onLogin
-  //     },
-  //   ];
-  //
-  //   return config.find((config) => config.isAuth);
-  // };
 
   const responseGoogle = (response: any) => {
     console.log(response);
@@ -42,18 +20,6 @@ const MainContent = ({ classes }: MainContentProps) => {
       <Box display="flex" flexDirection="column" className={classes.textBlock}>
         <h1 className={classes.title}>Pass the Botmakers certification program </h1>
         <h3 className={classes.text}>Realize full potential of your marketing agency</h3>
-        {/*<Button*/}
-        {/*  variant="contained"*/}
-        {/*  color="primary"*/}
-        {/*  className={classes.startButton}*/}
-        {/*  onClick={authConfig()?.action}*/}
-        {/*>{authConfig()?.buttonText}</Button>*/}
-        {/*<Button*/}
-        {/*  variant="contained"*/}
-        {/*  color="primary"*/}
-        {/*  className={classes.startButton}*/}
-        {/*  onClick={authConfig()?.action}*/}
-        {/*>{authConfig()?.buttonText}</Button>*/}
         <GoogleLogin
           clientId={process.env.GOOGLE_CLIENT_ID}
           onSuccess={responseGoogle}
