@@ -4,12 +4,12 @@ import { Box } from '@material-ui/core';
 
 import MainScreen from './components/MainScreen';
 import Programs from './components/Programs';
-import Benefits from './components/Benefits';
-import Enroll from './components/Enroll';
-import Certifications from './components/Certifications';
-import Reviews from './components/Reviews';
-import Questions from './components/Questions';
-import Footer from './components/Footer';
+// import Benefits from './components/Benefits';
+// import Enroll from './components/Enroll';
+// import Certifications from './components/Certifications';
+// import Reviews from './components/Reviews';
+// import Questions from './components/Questions';
+// import Footer from './components/Footer';
 
 import styles from './Landing.styles';
 
@@ -25,15 +25,15 @@ const Landing = (props: LandingProps) => {
       <Programs
         title="Choose your program"
       />
-      <Benefits />
-      <Enroll />
-      <Certifications/>
-      <Reviews />
-      <Programs
-        title="Ready to start?"
-      />
-      <Questions />
-      <Footer />
+      {/*<Benefits />*/}
+      {/*<Enroll />*/}
+      {/*<Certifications/>*/}
+      {/*<Reviews />*/}
+      {/*<Programs*/}
+      {/*  title="Ready to start?"*/}
+      {/*/>*/}
+      {/*<Questions />*/}
+      {/*<Footer />*/}
     </Box>
   );
 };
