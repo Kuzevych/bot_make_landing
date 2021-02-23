@@ -22,7 +22,7 @@ export default function styles({ spacing, breakpoints }: Theme) {
         margin: 'auto',
         maxWidth: '60%',
         width: '60%',
-        padding: 0
+        padding: spacing(15, 0),
       },
     },
     [breakpoints.down(screenSize.lg)]: {
@@ -38,7 +38,7 @@ export default function styles({ spacing, breakpoints }: Theme) {
     },
     [breakpoints.down(screenSize.sm)]: {
       root: {
-        margin: spacing(0, 3)
+        margin: spacing(3, 3)
       },
       programs: {
         flexDirection: 'column'

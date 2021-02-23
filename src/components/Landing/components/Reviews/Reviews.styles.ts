@@ -1,9 +1,10 @@
 import { createStyles, Theme } from '@material-ui/core/styles';
 import { colors } from 'shared/constants/colors';
 import { CSSProperties } from '@material-ui/styles';
+import { screenSize } from '../../../../shared/constants/breakpoints';
 
 
-export default function styles({ spacing }: Theme) {
+export default function styles({ spacing, breakpoints }: Theme) {
 
   const width: CSSProperties = {
     width: '50%'
@@ -19,7 +20,7 @@ export default function styles({ spacing }: Theme) {
       textAlign: 'center'
     },
     reviewContainer: {
-      marginTop: spacing(8)
+      margin: spacing(8, 0)
     },
     reviewsLeft: {
       ...width,
@@ -41,6 +42,38 @@ export default function styles({ spacing }: Theme) {
     image: {
       width: '100%',
       objectFit: 'contain'
+    },
+    [breakpoints.up(screenSize.xl)]: {
+      container: {
+        margin: spacing(12, 'auto', 0),
+        maxWidth: '60%',
+        width: '60%',
+        padding: 0
+      },
+    },
+    [breakpoints.down(screenSize.lg)]: {
+      container: {
+        margin: spacing(12, 20),
+        padding: spacing(4, 0, 0)
+      }
+    },
+    [breakpoints.down(screenSize.md)]: {
+      container: {
+        margin: spacing(4, 10)
+      },
+    },
+    [breakpoints.down(screenSize.sm)]: {
+      container: {
+        margin: spacing(3,3)
+      },
+      reviewsLeft: {
+        width: '100%',
+        marginRight: 0
+      },
+
+      reviewsRight: {
+        display: 'none',
+      }
     }
   });
 }

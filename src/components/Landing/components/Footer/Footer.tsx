@@ -10,7 +10,8 @@ import footerLogo from 'shared/images/footerLogo.png';
 import styles from './Footer.styles';
 import FooterSection from './FooterSection';
 
-export interface FooterProps extends WithStyles<typeof styles> {}
+export interface FooterProps extends WithStyles<typeof styles> {
+}
 
 export interface FooterLinks {
   sectionTitle: string;
@@ -25,8 +26,8 @@ interface Links {
 
 const Footer = ({ classes }: FooterProps) => {
 
-  const footerConfig: FooterLinks[] = React.useMemo(()=> {
-    return[
+  const footerConfig: FooterLinks[] = React.useMemo(() => {
+    return [
       {
         sectionTitle: 'Company',
         links: [
@@ -84,11 +85,14 @@ const Footer = ({ classes }: FooterProps) => {
             text: 'Sign up',
             link: '/signup'
           }
-        ]
+        ],
+        classes: {
+          root: classes.joinBlock
+        }
       },
 
     ];
-  },[]);
+  }, []);
 
   const iconsConfig = [
     { icon: <FacebookIcon classes={{ root: classes.icon }}/>, id: Math.random() },
@@ -96,10 +100,10 @@ const Footer = ({ classes }: FooterProps) => {
     { icon: <YouTubeIcon classes={{ root: classes.icon }}/>, id: Math.random() },
   ];
 
-  return(
+  return (
     <footer className={classes.root}>
       <Box display="flex" flexDirection="column" className={classes.container}>
-        <Box display="flex" flexDirection="row" justifyContent="space-between">
+        <Box display="flex" flexDirection="row" justifyContent="space-between" className={classes.main}>
           <Box display="flex" flexDirection="column" className={classes.logoBlock}>
             <img src={footerLogo} alt="logo" className={classes.logo}/>
             <p className={classes.text}>
@@ -109,14 +113,11 @@ const Footer = ({ classes }: FooterProps) => {
               {iconsConfig.map(({ icon, id }) => <div key={id}>{icon}</div>)}
             </Box>
           </Box>
-          {
-            footerConfig.map((section) =>
+          <Box display="flex" flexDirection="row" justifyContent="space-between" className={classes.linksBlock}>
+            {footerConfig.map((section) =>
               <FooterSection key={section.sectionTitle} {...section} />
-            )
-          }
-        </Box>
-        <Box display="flex" flexDirection="row" justifyContent="space-between">
-
+            )}
+          </Box>
         </Box>
       </Box>
     </footer>

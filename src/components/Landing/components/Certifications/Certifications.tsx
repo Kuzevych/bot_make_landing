@@ -78,11 +78,11 @@ const Certifications = ({ classes }: CertificationsProps) => {
         description="Add your Botmakers certification badge to your LinkedIn profile or Facebook account to demonstrate your professional and technical expertise."
         classes={{ root: classes.secondHeader }}
       />
-      <Box display="flex" justifyContent="space-between" alignItems="center">
+      <Box display="flex" justifyContent="space-between" alignItems="center" className={classes.badgeBlock}>
         <h2 className={classes.badgeText}>YOU&apos;VE EARNED IT. GET THE RECOGNITION YOU DESERVE.</h2>
         <img src={badges} alt="" className={classes.badgeImage}/>
       </Box>
-      <Box display="flex" justifyContent="space-between" >
+      <Box display="flex" justifyContent="space-between" className={classes.advantageBlock}>
         {avantages.map((advantage) =>
           <Advantage key={advantage.value} {...advantage} classes={{ root: classes.advantage }}/>
         )}
