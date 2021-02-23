@@ -37,7 +37,7 @@ export default function styles({ spacing, breakpoints }: Theme) {
     },
     [breakpoints.up(screenSize.xl)]: {
       root: {
-        margin: spacing(12, 'auto', 0),
+        margin: spacing(12, 'auto', 12),
         maxWidth: '60%',
         width: '60%',
         padding: 0
@@ -62,7 +62,7 @@ export default function styles({ spacing, breakpoints }: Theme) {
     },
     [breakpoints.down(screenSize.sm)]: {
       root: {
-        margin: spacing(0, 3)
+        margin: spacing(3, 3)
       },
       certifications: {
         flexDirection: 'column',

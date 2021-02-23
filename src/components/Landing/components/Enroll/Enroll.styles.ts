@@ -87,7 +87,7 @@ export default function styles({ spacing, breakpoints }: Theme) {
     },
     [breakpoints.down(screenSize.sm)]: {
       container: {
-        margin: spacing(0, 3)
+        margin: spacing(3, 3)
       },
       enrolls: {
         flexDirection: 'column'
@@ -98,7 +98,7 @@ export default function styles({ spacing, breakpoints }: Theme) {
         width: 'auto'
       },
       image: {
-        height: 110
+        height: 80
       }
     }
   });

@@ -49,7 +49,7 @@ const Reviews = ({ classes }: ReviewsProp) => {
               </div>
             )}
           </Box>
-          <Box display="flex" flexDirection="column" className={classes.reviewsLeft}>
+          <Box display="flex" flexDirection="column" className={classes.reviewsRight}>
             {imagesConfig.slice(imagesConfig.length/2).map(({ image }, idx) =>
               <div className={classes.review} key={image + idx}>
                 <img src={image} alt='img' className={classes.image}/>

@@ -51,7 +51,7 @@ const styles = ({ spacing, breakpoints }: Theme) => {
         height: 'auto'
       },
       container: {
-        margin: spacing(0, 3),
+        margin: spacing(3, 3),
       },
       mainScreen: {
         flexDirection: 'column-reverse',
