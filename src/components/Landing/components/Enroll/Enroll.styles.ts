@@ -18,24 +18,6 @@ export default function styles({ spacing, breakpoints, palette: { primary } }: T
     },
     enroll: {
       width: '24%',
-
-      '&::before': {
-        content: '""',
-        position: 'relative',
-        top: '30%',
-        left: '80%',
-        borderTop: `1px dashed ${colors.darkBlue}`,
-        width: '118%',
-        zIndex: 1
-      },
-
-      '&:last-of-type': {
-        '&::before': {
-          content: '""',
-          position: 'relative',
-          border: 'none',
-        },
-      }
     },
     image: {
       zIndex: 2
@@ -67,20 +49,7 @@ export default function styles({ spacing, breakpoints, palette: { primary } }: T
       container: {
         margin: spacing(4, 10)
       },
-      enroll: {
-        '&::before': {
-          content: '""',
-          position: 'absolute',
-          border: 'none',
-        },
-        '&:last-of-type': {
-          '&::before': {
-            content: '""',
-            position: 'absolute',
-            border: 'none',
-          },
-        }
-      },
+      enroll: {},
       image: {
         margin: spacing(0, 4, 4, 0)
       }
