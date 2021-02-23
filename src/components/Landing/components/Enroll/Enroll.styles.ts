@@ -3,10 +3,10 @@ import { createStyles, Theme } from '@material-ui/core/styles';
 import { colors } from 'shared/constants/colors';
 import { screenSize } from 'shared/constants/breakpoints';
 
-export default function styles({ spacing, breakpoints }: Theme) {
+export default function styles({ spacing, breakpoints, palette: { primary } }: Theme) {
   return createStyles({
     root: {
-      background: `linear-gradient(to right, ${colors.lightBlack},  ${colors.lightBlue})`,
+      background: `linear-gradient(to right, ${primary.main},  ${colors.lightBlue})`,
       color: colors.white
     },
     container: {

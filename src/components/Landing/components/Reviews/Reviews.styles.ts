@@ -4,7 +4,7 @@ import { CSSProperties } from '@material-ui/styles';
 import { screenSize } from '../../../../shared/constants/breakpoints';
 
 
-export default function styles({ spacing, breakpoints }: Theme) {
+export default function styles({ spacing, breakpoints, palette: { primary } }: Theme) {
 
   const width: CSSProperties = {
     width: '50%'
@@ -12,7 +12,7 @@ export default function styles({ spacing, breakpoints }: Theme) {
 
   return createStyles({
     root: {
-      background: `linear-gradient(to right, ${colors.lightBlack},  ${colors.lightBlue})`,
+      background: `linear-gradient(to right, ${primary.main},  ${colors.lightBlue})`,
       color: colors.white
     },
     container: {
