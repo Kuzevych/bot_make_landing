@@ -20,7 +20,7 @@ export default function styles({ spacing, breakpoints }: Theme) {
       textAlign: 'center'
     },
     reviewContainer: {
-      marginTop: spacing(8)
+      margin: spacing(8, 0)
     },
     reviewsLeft: {
       ...width,
