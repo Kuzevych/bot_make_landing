@@ -9,7 +9,7 @@ import Enroll from './components/Enroll';
 import Certifications from './components/Certifications';
 import Reviews from './components/Reviews';
 import Questions from './components/Questions';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 
 import styles from './Landing.styles';
 
@@ -29,11 +29,11 @@ const Landing = (props: LandingProps) => {
       <Enroll />
       <Certifications/>
       <Reviews />
-      {/*<Programs*/}
-      {/*  title="Ready to start?"*/}
-      {/*/>*/}
+      <Programs
+        title="Ready to start?"
+      />
       <Questions />
-      {/*<Footer />*/}
+      <Footer />
     </Box>
   );
 };
