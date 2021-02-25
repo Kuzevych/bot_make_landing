@@ -25,15 +25,15 @@ const Landing = (props: LandingProps) => {
       <Programs
         title="Choose your program"
       />
-      <Benefits />
-      <Enroll />
+      <Benefits/>
+      <Enroll/>
       <Certifications/>
-      <Reviews />
+      <Reviews/>
       <Programs
         title="Ready to start?"
       />
-      <Questions />
-      <Footer />
+      <Questions/>
+      <Footer/>
     </Box>
   );
 };

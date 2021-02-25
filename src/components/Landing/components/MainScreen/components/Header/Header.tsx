@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, withStyles, WithStyles, FormControlLabel, Switch } from '@material-ui/core';
+import { Box, FormControlLabel, Switch, withStyles, WithStyles } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import Logo from 'shared/icons/Logo';
@@ -10,28 +10,24 @@ import { Theme } from 'shared/types/theme';
 import styles from './Header.styles';
 
 export interface HeaderProps extends WithStyles<typeof styles> {
+  onToggle?: () => void
 }
 
 const Header = (props: HeaderProps) => {
   let [checked, setChecked] = React.useState(false);
-
-  React.useEffect(() => {
-    if (localStorage.getItem('theme') === Theme.Dark) {
-      setChecked(true);
-    }
-  }, []);
-
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.checked);
   };
 
   React.useEffect(() => {
+    props.onToggle();
     if (checked) {
       localStorage.setItem('theme', Theme.Dark);
     } else {
       localStorage.setItem('theme', Theme.Light);
     }
+    props.onToggle();
   }, [checked]);
 
   const { classes } = props;
@@ -50,11 +46,12 @@ const Header = (props: HeaderProps) => {
           <Switch
             checked={checked}
             onChange={handleChange}
-            name="checkedB"
+            name="checkbox"
             color="primary"
           />
         }
         label={checked ? Theme.Dark : Theme.Light}
+        classes={{ label: classes.label }}
       />
     </Box>
   );

@@ -1,6 +1,8 @@
 import { createStyles, Theme } from "@material-ui/core/styles";
 
-export default function styles({ spacing }: Theme){
+import { screenSize } from "shared/constants/breakpoints";
+
+export default function styles({ spacing, palette: { primary }, breakpoints }: Theme){
 
   return createStyles({
     root: {
@@ -13,5 +15,13 @@ export default function styles({ spacing }: Theme){
     menuIcon: {
       display: 'none'
     },
+    label: {
+      color: primary.main,
+    },
+    [breakpoints.down(screenSize.sm)]: {
+      label: {
+        display: 'none'
+      }
+    }
   });
 }
