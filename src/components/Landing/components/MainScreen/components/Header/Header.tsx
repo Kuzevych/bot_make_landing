@@ -10,7 +10,7 @@ import { Theme } from 'shared/types/theme';
 import styles from './Header.styles';
 
 export interface HeaderProps extends WithStyles<typeof styles> {
-  onToggle?: () => void
+  onToggle?: (theme: Theme) => void
 }
 
 const Header = (props: HeaderProps) => {
@@ -18,17 +18,23 @@ const Header = (props: HeaderProps) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.checked);
+    if (checked) {
+      localStorage.setItem('theme', Theme[Theme.Light]);
+      props.onToggle(Theme.Light);
+    } else {
+      localStorage.setItem('theme', Theme[Theme.Dark]);
+      props.onToggle(Theme.Dark);
+    }
   };
 
-  React.useEffect(() => {
-    props.onToggle();
-    if (checked) {
-      localStorage.setItem('theme', Theme.Dark);
-    } else {
-      localStorage.setItem('theme', Theme.Light);
+  React.useEffect(()=>{
+    if( localStorage.getItem('theme') && localStorage.getItem('theme') === Theme[Theme.Light]) {
+      setChecked(false);
+      return;
     }
-    props.onToggle();
-  }, [checked]);
+
+    setChecked(true);
+  },[]);
 
   const { classes } = props;
 
@@ -50,7 +56,7 @@ const Header = (props: HeaderProps) => {
             color="primary"
           />
         }
-        label={checked ? Theme.Dark : Theme.Light}
+        label={checked ? Theme[Theme.Dark] : Theme[Theme.Light]}
         classes={{ label: classes.label }}
       />
     </Box>

@@ -11,7 +11,9 @@ export default function styles({ spacing, palette: { primary }, breakpoints }: T
     logoText: {
       marginLeft: spacing(2)
     },
-    navMenu: {},
+    navMenu: {
+      marginRight: spacing(3)
+    },
     menuIcon: {
       display: 'none'
     },

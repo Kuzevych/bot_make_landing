@@ -7,6 +7,7 @@ import { colors } from 'shared/constants/colors';
 import { Theme } from 'shared/types/theme';
 import { GlobalContext } from 'context/context';
 
+
 import styles from './App.styles';
 
 export interface AppProps extends WithStyles<typeof styles> {}
@@ -18,17 +19,20 @@ const App: React.FC<AppProps> = (props: AppProps) => {
   });
 
   const primaryColor: string = React.useMemo(() => {
-    if (localStorage.getItem('theme') === Theme.Light) {
+    if (localStorage.getItem('theme') === Theme[Theme.Light]) {
+      setState({ theme: Theme.Light });
+
       return colors.lightGreen;
     }
 
+    setState({ theme: Theme.Dark });
     return colors.lightBlack;
   }, [state.theme]);
 
-  const toggleTheme = () => {
+  const toggleTheme = (theme: Theme) => {
     setState({
       ...state,
-      theme: state.theme === Theme.Light ? Theme.Dark : Theme.Light
+      theme: theme
     });
   };
 
