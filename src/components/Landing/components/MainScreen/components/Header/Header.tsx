@@ -34,7 +34,7 @@ const Header = (props: HeaderProps) => {
 
   return (
     <Box display="flex" flexDirection="row" justifyContent="space-between" alignItems="center" className={classes.root}>
-      <Box display="flex" flexDirection="row" alignItems="center">
+      <Box display="flex" flexDirection="row">
         <Logo/>
         <h3 className={classes.logoText}>botmakers</h3>
       </Box>

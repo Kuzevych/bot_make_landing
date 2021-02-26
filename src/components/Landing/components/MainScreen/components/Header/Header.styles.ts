@@ -21,6 +21,9 @@ export default function styles({ spacing, palette: { primary }, breakpoints }: T
     [breakpoints.down(screenSize.sm)]: {
       label: {
         display: 'none'
+      },
+      menuIcon: {
+        marginRight: spacing(2)
       }
     }
   });
