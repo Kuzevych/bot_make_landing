@@ -19,10 +19,8 @@ const Header = (props: HeaderProps) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.checked);
     if (checked) {
-      localStorage.setItem('theme', Theme[Theme.Light]);
       props.onToggle(Theme.Light);
     } else {
-      localStorage.setItem('theme', Theme[Theme.Dark]);
       props.onToggle(Theme.Dark);
     }
   };
@@ -56,7 +54,7 @@ const Header = (props: HeaderProps) => {
             color="primary"
           />
         }
-        label={checked ? Theme[Theme.Dark] : Theme[Theme.Light]}
+        label={checked ? Theme.Dark : Theme.Light}
         classes={{ label: classes.label }}
       />
     </Box>

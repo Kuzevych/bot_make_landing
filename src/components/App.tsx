@@ -18,14 +18,21 @@ const App: React.FC<AppProps> = (props: AppProps) => {
     theme: Theme.Dark
   });
 
-  const primaryColor: string = React.useMemo(() => {
+
+  React.useEffect(()=> {
     if (localStorage.getItem('theme') === Theme[Theme.Light]) {
       setState({ theme: Theme.Light });
 
+    } else {
+      setState({ theme: Theme.Dark });
+    }
+  },[]);
+
+  const primaryColor: string = React.useMemo(() => {
+    if (localStorage.getItem('theme') && localStorage.getItem('theme') === Theme.Light) {
       return colors.lightGreen;
     }
 
-    setState({ theme: Theme.Dark });
     return colors.lightBlack;
   }, [state.theme]);
 
@@ -34,6 +41,8 @@ const App: React.FC<AppProps> = (props: AppProps) => {
       ...state,
       theme: theme
     });
+
+    localStorage.setItem('theme', theme);
   };
 
   const theme = createMuiTheme({

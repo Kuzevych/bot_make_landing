@@ -3,7 +3,7 @@ import * as React from 'react';
 
 const initialState = {
   theme: Theme.Dark,
-  toggleTheme: () => {}
+  toggleTheme: (theme: Theme) => {}
 };
 
 export const GlobalContext = React.createContext(initialState);
