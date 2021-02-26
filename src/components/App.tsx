@@ -5,9 +5,9 @@ import { WithStyles, withStyles } from "@material-ui/styles";
 import Landing from "./Landing";
 import { colors } from 'shared/constants/colors';
 import { Theme } from 'shared/types/theme';
+import { GlobalContext } from 'context/context';
 
 import styles from './App.styles';
-import { GlobalContext } from "store/store";
 
 export interface AppProps extends WithStyles<typeof styles> {}
 

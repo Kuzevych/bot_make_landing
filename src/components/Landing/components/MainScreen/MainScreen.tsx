@@ -6,9 +6,9 @@ import Header from './components/Header';
 import MainContent from "./components/MainContent";
 import BottomContent from "./components/BottomContent";
 import { Theme } from 'shared/types/theme';
+import { GlobalContext } from 'context/context';
 
 import styles from './MainScreen.styles';
-import { GlobalContext } from 'store';
 
 export interface MainScreenProps extends WithStyles<typeof styles> {
   theme?: Theme
