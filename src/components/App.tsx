@@ -45,7 +45,9 @@ const App: React.FC<AppProps> = (props: AppProps) => {
   const { classes } = props;
 
   return (
-    <GlobalContext.Provider value={{ state, toggleTheme }}>
+    <GlobalContext.Provider value={{
+      theme: state.theme,
+      toggleTheme }}>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
         <Landing classes={{ root: classes.root }}/>
