@@ -1,5 +1,5 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { debugContextDevtool } from 'react-context-devtool';
 
 import App from "./src/components";

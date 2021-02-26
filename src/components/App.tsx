@@ -5,7 +5,7 @@ import { WithStyles, withStyles } from "@material-ui/styles";
 import Landing from "./Landing";
 import { colors } from 'shared/constants/colors';
 import { Theme } from 'shared/types/theme';
-import { GlobalContext } from 'context/context';
+import { ThemeContext } from 'context/theme';
 
 
 import styles from './App.styles';
@@ -15,30 +15,26 @@ export interface AppProps extends WithStyles<typeof styles> {}
 const App: React.FC<AppProps> = (props: AppProps) => {
 
   let [state, setState] = React.useState({
-    theme: Theme.Dark
+    theme: localStorage.getItem('theme') || Theme.Light,
   });
 
 
   React.useEffect(()=> {
-    if (localStorage.getItem('theme') === Theme[Theme.Light]) {
-      setState({ theme: Theme.Light });
-
-    } else {
-      setState({ theme: Theme.Dark });
+    if (localStorage.getItem('theme')) {
+      setState({ theme: localStorage.getItem('theme') });
     }
   },[]);
 
   const primaryColor: string = React.useMemo(() => {
-    if (localStorage.getItem('theme') && localStorage.getItem('theme') === Theme.Light) {
-      return colors.lightGreen;
+    if (localStorage.getItem('theme') && localStorage.getItem('theme') === Theme.Dark) {
+      return colors.lightBlack;
     }
 
-    return colors.lightBlack;
+    return colors.lightGreen;
   }, [state.theme]);
 
   const toggleTheme = (theme: Theme) => {
     setState({
-      ...state,
       theme: theme
     });
 
@@ -58,14 +54,14 @@ const App: React.FC<AppProps> = (props: AppProps) => {
   const { classes } = props;
 
   return (
-    <GlobalContext.Provider value={{
+    <ThemeContext.Provider value={{
       theme: state.theme,
       toggleTheme }}>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
         <Landing classes={{ root: classes.root }}/>
       </ThemeProvider>
-    </GlobalContext.Provider>
+    </ThemeContext.Provider>
   );
 };
 

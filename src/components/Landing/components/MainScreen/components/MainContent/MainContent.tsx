@@ -23,7 +23,6 @@ const MainContent = ({ classes }: MainContentProps) => {
         <GoogleLogin
           clientId={process.env.GOOGLE_CLIENT_ID}
           onSuccess={responseGoogle}
-          onAutoLoadFinished={()=>console.log('loaded')}
           className={classes.startButton}
         />
       </Box>

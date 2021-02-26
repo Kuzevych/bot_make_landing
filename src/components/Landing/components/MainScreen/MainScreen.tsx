@@ -6,7 +6,7 @@ import Header from './components/Header';
 import MainContent from "./components/MainContent";
 import BottomContent from "./components/BottomContent";
 import { Theme } from 'shared/types/theme';
-import { GlobalContext } from 'context/context';
+import { ThemeContext } from 'context/theme';
 
 import styles from './MainScreen.styles';
 
@@ -19,33 +19,33 @@ const MainScreen = (props: MainScreenProps) => {
 
   return (
     <div className={classes.root}>
-      <GlobalContext.Consumer>
-        {(context) =>
-          <Box display="flex" flexDirection="column" justifyContent="space-between" className={classes.container}>
+      <Box display="flex" flexDirection="column" justifyContent="space-between" className={classes.container}>
+        <ThemeContext.Consumer>
+          {(context) =>
             <Header classes={{
               navMenu: classes.navMenu,
               menuIcon: classes.menuIcon
             }}
             onToggle={context.toggleTheme}
             />
-            <MainContent classes={{
-              root: classes.mainScreen,
-              textBlock: classes.mainContentText,
-              image: classes.image,
-              title: classes.title,
-              text: classes.text,
-              startButton: classes.startButton
-            }} />
-            <BottomContent classes={{
-              root: classes.bottomSection,
-              benefits: classes.benefits,
-              benefitTitle: classes.benefitTitle,
-              benefitText: classes.benefitText
-            }}
-            />
-          </Box>
-        }
-      </GlobalContext.Consumer>
+          }
+        </ThemeContext.Consumer>
+        <MainContent classes={{
+          root: classes.mainScreen,
+          textBlock: classes.mainContentText,
+          image: classes.image,
+          title: classes.title,
+          text: classes.text,
+          startButton: classes.startButton
+        }}/>
+        <BottomContent classes={{
+          root: classes.bottomSection,
+          benefits: classes.benefits,
+          benefitTitle: classes.benefitTitle,
+          benefitText: classes.benefitText
+        }}
+        />
+      </Box>
     </div>
   );
 };
