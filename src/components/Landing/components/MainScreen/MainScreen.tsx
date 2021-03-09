@@ -27,6 +27,7 @@ const MainScreen = (props: MainScreenProps) => {
               menuIcon: classes.menuIcon
             }}
             onToggle={context.toggleTheme}
+            theme={context.theme}
             />
           }
         </ThemeContext.Consumer>

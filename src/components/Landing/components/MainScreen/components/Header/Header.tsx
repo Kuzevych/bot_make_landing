@@ -10,31 +10,30 @@ import { Theme } from 'shared/types/theme';
 import styles from './Header.styles';
 
 export interface HeaderProps extends WithStyles<typeof styles> {
+  theme: Theme | string;
   onToggle?: (theme: Theme) => void
 }
 
-const Header = (props: HeaderProps) => {
+const Header = ({ theme, onToggle, classes }: HeaderProps) => {
   let [checked, setChecked] = React.useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.checked);
     if (checked) {
-      props.onToggle(Theme.Light);
+      onToggle(Theme.Light);
     } else {
-      props.onToggle(Theme.Dark);
+      onToggle(Theme.Dark);
     }
   };
 
   React.useEffect(()=>{
-    if( localStorage.getItem('theme') && localStorage.getItem('theme') === Theme[Theme.Light]) {
+    if (theme === Theme.Light) {
       setChecked(false);
       return;
     }
 
     setChecked(true);
   },[]);
-
-  const { classes } = props;
 
   return (
     <Box display="flex" flexDirection="row" justifyContent="space-between" alignItems="center" className={classes.root}>
