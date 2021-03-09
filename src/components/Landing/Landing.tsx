@@ -23,7 +23,7 @@ const Landing = (props: LandingProps) => {
     <Box display="flex" flexDirection="column" className={classes.root}>
       <MainScreen />
       <Programs
-        title="Choose your program"
+        title="Choose your program:"
       />
       <Benefits/>
       <Enroll/>
