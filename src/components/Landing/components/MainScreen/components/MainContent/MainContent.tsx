@@ -18,7 +18,7 @@ const MainContent = ({ classes }: MainContentProps) => {
   return(
     <Box display="flex" flexDirection="row" justifyContent="space-between" alignItems="center" className={classes.root}>
       <Box display="flex" flexDirection="column" className={classes.textBlock}>
-        <h1 className={classes.title}>Pass the Botmakers certification program!!! </h1>
+        <h1 className={classes.title}>Pass the Botmakers certification program!</h1>
         <h3 className={classes.text}>Realize full potential of your marketing agency</h3>
         <GoogleLogin
           clientId={process.env.GOOGLE_CLIENT_ID}
